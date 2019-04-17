@@ -1,0 +1,373 @@
+@charset "UTF-8";
+/* =======================================================
+*
+* 2018/11/26
+* Kohimoto Edit
+* https://kohimoto.com
+*
+* ======================================================= */
+/* =======================================================
+* font
+* ======================================================= */
+/* =======================================================
+* media query
+* ======================================================= */
+/* =======================================================
+* common
+* ======================================================= */
+html {
+  font-size: 16px;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+  line-height: 2.31;
+  letter-spacing: 0.08em; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+  a:hover {
+    cursor: pointer; }
+
+h2 {
+  line-height: 1;
+  text-align: center; }
+  h2 img {
+    margin: 0 auto; }
+
+h3 {
+  font-size: 26px;
+  padding: 50px 0 55px;
+  font-weight: normal;
+  line-height: 1.73;
+  letter-spacing: 0.1em; }
+
+h4 {
+  /*font-size: 25px;*/
+  font-size: 23px;
+  line-height: 1.6;
+  font-weight: normal;
+  padding-bottom: 35px;
+  /*letter-spacing: 0.05em;*/
+  letter-spacing: 0.0em; }
+
+.wrap {
+  margin-bottom: 50px; }
+
+.red {
+  color: #cc1b1c; }
+
+.pink {
+  color: #f29c97; }
+
+.green {
+  color: #377238; }
+
+.yellow {
+  color: #f7b52c; }
+
+.blown {
+  color: #804f21; }
+
+.container {
+  width: 1200px;
+  max-width: 100%;
+  margin: 0 auto; }
+  .container .inner {
+    padding: 125px 80px; }
+
+.center_center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center; }
+
+.small {
+  font-size: 14px; }
+
+.bold {
+  font-weight: bold; }
+
+.center {
+  text-align: center; }
+
+.area_100 {
+  width: 100%;
+  position: relative; }
+  .area_100 video {
+    width: 100%;
+    display: block; }
+  .area_100 img {
+    display: block; }
+  .area_100.img img {
+    width: 100%; }
+
+.scroll {
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  bottom: 50px;
+  top: auto; }
+  .scroll img {
+    display: block;
+    margin: 0 auto; }
+    .scroll img:first-child {
+      margin-bottom: 20px; }
+
+.btn_area .btn {
+  border: 4px solid #e50012;
+  width: 732px;
+  margin: 0 auto;
+  padding: 30px 0; }
+  .btn_area .btn p {
+    font-size: 25px;
+    color: #e50012; }
+
+header .container .inner {
+  position: relative; }
+
+header .container ul li {
+  display: inline-block;
+  line-height: 1.75; }
+
+header .container .inner {
+  padding: 0px 80px;
+  overflow: hidden; }
+
+header .logo {
+  float: left;
+  margin: 23px 0 21px; }
+  header .logo img {
+    width: 60px; }
+
+header .menu01 {
+  float: left;
+  margin: 30px 0px 30px 50px;
+  overflow: hidden;
+  padding-left: 0; }
+  header .menu01 li {
+    margin-left: 30px; }
+    header .menu01 li:first-child {
+      margin-left: 0; }
+    header .menu01 li.active a {
+      border-bottom: 1px solid;
+      padding-bottom: 6px; }
+
+header .menu02 {
+  float: right;
+  padding-left: 0;
+  margin: 25px 0; }
+  header .menu02 li {
+    margin-left: 10px;
+    border: 1px solid #b5b5b6;
+    padding: 8px 0px;
+    width: 145px;
+    text-align: center; }
+    header .menu02 li:first-child {
+      margin-left: 0; }
+    header .menu02 li.color {
+      background: #b5b5b6; }
+      header .menu02 li.color a {
+        color: #fff;
+        display: block;
+        width: 100%; }
+
+footer {
+  position: relative; }
+  footer .container {
+    margin: 0 auto 90px;
+    position: relative; }
+    footer .container p {
+      font-size: 12px;
+      text-align: center; }
+    footer .container .go_top {
+      width: 80px;
+      position: absolute;
+      right: 0;
+      bottom: 0; }
+
+.message {
+  overflow: hidden; }
+  .message.inner {
+    padding: 60px 80px 80px; }
+  .message h2 {
+    padding-top: 48px;
+    text-align: left; }
+  .message .left {
+    float: left; }
+  .message .right {
+    float: right; }
+    .message .right img {
+      width: 300px; }
+    .message .right p {
+      text-align: center;
+      line-height: 1.625; }
+
+.scene .inner {
+  padding-bottom: 0; }
+
+.scene .ex {
+  margin-bottom: 130px;
+  letter-spacing: 0.05em; }
+
+.box {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 110px; }
+  .box:last-child {
+    margin-bottom: 130px; }
+  .box .inner_img {
+    float: left; }
+    .box .inner_img img {
+      display: block; }
+  .box .inner_txt {
+    float: left;
+    width: 375px; }
+    .box .inner_txt p {
+      text-align: left;
+      letter-spacing: 0.05em;
+      line-height: 2; }
+  .box .inner_right {
+    margin-left: 45px; }
+  .box dl dt img {
+    display: block;
+    text-align: center;
+    margin: 0 auto; }
+  .box dl dd {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1;
+    padding: 35px 0 25px;
+    letter-spacing: 0.1em; }
+
+.frame {
+  border: 1px solid;
+  border-radius: 30px; }
+  .frame.border_p {
+    border-color: #f29c97;
+    margin-bottom: 150px; }
+    .frame.border_p .inner_right {
+      margin-left: 54px; }
+  .frame .box {
+    padding: 30px 75px;
+    margin-bottom: 0; }
+
+.box_half {
+  overflow: hidden;
+  /*padding: 0 75px 50px;*/
+  width: 875px;
+  margin: 0 auto; }
+  .box_half dl {
+    width: 380px;
+    float: left;
+    margin-left: 115px; }
+    .box_half dl:nth-child(odd) {
+      margin-left: 0; }
+    .box_half dl dt {
+      /*border-bottom: 3px solid #e50012;*/
+      line-height: 1;
+      margin-bottom: 20px; }
+    .box_half dl dd {
+      line-height: 1.714;
+      margin: 20px 0 60px; }
+      .box_half dl dd .line_red {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #e50012; }
+      .box_half dl dd .line_yellow {
+        display: block;
+        width: 100%;
+        height: 3px;
+        background: #f7b52c;
+        margin-top: 2px;
+        margin-bottom: 20px; }
+
+.product .inner img.img_h {
+  margin-bottom: 80px; }
+
+.product #motion .wrap_motion {
+  position: relative;
+  height: 500px; }
+  .product #motion .wrap_motion div {
+    position: relative;
+    width: 25%;
+    float: left;
+    height: 500px;
+    margin-left: 80px;
+    width: calc(25% - 60px); }
+    .product #motion .wrap_motion div:first-child {
+      margin-left: 0px; }
+    .product #motion .wrap_motion div .move_01 {
+      position: absolute;
+      top: 0;
+      left: 0; }
+      .product #motion .wrap_motion div .move_01.disapper {
+        -webkit-animation: disapperAnimation 1.5s ease-in-out 0s forwards;
+        animation: disapperAnimation 1.5s ease-in-out 0s forwards; }
+    .product #motion .wrap_motion div .move_02 {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .product #motion .wrap_motion div .move_03 {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .product #motion .wrap_motion div .move_04 {
+      position: absolute;
+      top: 0;
+      left: 0; }
+    .product #motion .wrap_motion div .none {
+      opacity: 0; }
+    .product #motion .wrap_motion div .apper {
+      -webkit-animation: apperAnimation 1.0s ease-in 0s forwards;
+      animation: apperAnimation 1.0s ease-in 0s forwards; }
+    .product #motion .wrap_motion div .disapper {
+      -webkit-animation: disapperAnimation 1.0s ease-in 0s forwards;
+      animation: disapperAnimation 1.0s ease-in 0s forwards; }
+
+@keyframes apperAnimation {
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes apperAnimation {
+  opacity: 1; }
+
+@keyframes disapperAnimation {
+  to {
+    opacity: 0; } }
+
+@-webkit-keyframes disapperAnimation {
+  opacity: 0; }
+
+.development .inner {
+  padding-bottom: 0; }
+
+.development h4 {
+  padding-bottom: 0px;
+  margin-bottom: 60px; }
+  .development h4:nth-of-type(2) {
+    margin-bottom: 40px; }
+    .development h4:nth-of-type(2) + .ex {
+      margin-bottom: 90px; }
+
+.development .ex {
+  margin-bottom: 110px;
+  letter-spacing: 0.05em; }
+
+.development img {
+  display: block; }
+  .development img.img_dot {
+    padding: 48px 0 42px;
+    margin: 0 auto; }
+  .development img.img_process {
+    margin: 0 auto; }
+
+.development .slick_area {
+  margin-bottom: 110px;
+  /*width: 875px;
+    margin-left: auto;
+    margin-right: auto;*/ }
+  .development .slick_area img {
+    margin: 0 auto; }
