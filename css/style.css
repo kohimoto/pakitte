@@ -13,6 +13,34 @@
 * media query
 * ======================================================= */
 /* =======================================================
+* motion_logo
+* ======================================================= */
+#viewer {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  text-align: left;
+  overflow: hidden;
+  position: relative; }
+
+#viewer img {
+  top: 0;
+  left: 0;
+  position: absolute; }
+
+#viewer img.r6 {
+  z-index: 1; }
+
+#viewer img.r5 {
+  z-index: 2; }
+
+#viewer img.r7 {
+  z-index: 3; }
+
+#viewer img.r8 {
+  z-index: 4; }
+
+/* =======================================================
 * common
 * ======================================================= */
 html {
