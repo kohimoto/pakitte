@@ -61,6 +61,37 @@ $('.havemenu').hover(
     }
 );
 
+
+//----- movie switch -------//
+  $('#btn_stop').click(function(){
+    var alt = $(this).attr('alt');
+    var v = document.getElementById("video");
+    if(alt == 'stop') {
+      pauseVideo(v);
+      $(this).attr('src','./images/start.png');
+      $(this).attr('alt','start');
+    } else {
+      playVideo(v);
+      $(this).attr('src','./images/stop.png');
+      $(this).attr('alt','stop');
+
+    }
+  });
+  $('#btn_off').click(function(){
+    var alt = $(this).attr('alt');
+    var v = document.getElementById("video");
+    if(alt == 'off') {
+      v.muted = false;
+      $(this).attr('src','./images/on.png');
+      $(this).attr('alt','on');
+    } else {
+      v.muted = true;
+      $(this).attr('src','./images/off.png');
+      $(this).attr('alt','off');
+
+    }
+  });
+
 });
 
 //------- FUNCTION -------//
@@ -78,5 +109,14 @@ function move03() {
   $('.move_04').addClass('apper');
   $('.move_03').addClass('disapper');
   $('.move_03').removeClass('none');
+}
+
+//----- movie switch -------//
+function pauseVideo(v) {
+	//動画を一時停止
+	v.pause();
+}
+function playVideo(v) {
+	v.play();
 }
 //----- //FUNCTION--------//
