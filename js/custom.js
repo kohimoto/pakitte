@@ -14,13 +14,28 @@ $(function(){
     }]
   });
 
-  //------ scroll top ------//
+//------ scroll top ------//
   $('.go_top a').click(function(){
     $('body,html').animate({scrollTop:0}, 1000, 'swing');
     return false;
   });
 
-  //------ drop motion ------//
+//------ logo motion ------//
+$(function(){
+    var setImg = '#viewer';
+    var fadeSpeed = 2000;
+    var switchDelay = 2000;
+
+    $(setImg).children('img').css({opacity:'0'});
+    $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+
+    setInterval(function(){
+        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+//        $(setImg + ' .o0:first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+    },switchDelay);
+});
+
+//------ drop motion ------//
 if($('#motion').length){
   thisOffset = $('#motion').offset().top + $('#motion').outerHeight();
 
