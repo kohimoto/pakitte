@@ -32,6 +32,9 @@ h2 {
   text-align: center; }
   h2 img {
     margin: 0 auto; }
+    @media (max-width: 800px) {
+      h2 img {
+        max-width: 100%; } }
 
 h3 {
   font-size: 1.625rem;
@@ -93,6 +96,9 @@ h4 {
   width: 1200px;
   max-width: 100%;
   margin: 0 auto; }
+  @media (max-width: 800px) {
+    .container {
+      width: 100%; } }
   .container .inner {
     padding: 120px 80px; }
 
@@ -232,22 +238,66 @@ h3.h_line:after {
 header .container .inner {
   position: relative;
   padding: 0px 80px; }
+  @media (max-width: 800px) {
+    header .container .inner {
+      margin: 0px 15px;
+      padding: 0; } }
 
 header .container ul li {
   display: inline-block;
   line-height: 1.75; }
+  @media (max-width: 800px) {
+    header .container ul li {
+      display: block;
+      text-align: left;
+      border-bottom: 1px solid;
+      border: none;
+      padding: 8px 0;
+      text-indent: 1em;
+      border-bottom: 1px solid; } }
 
 header .logo {
   float: left;
   margin: 23px 0 21px; }
+  @media (max-width: 800px) {
+    header .logo {
+      float: none;
+      height: 27.27px;
+      width: 47px;
+      margin: 20px 0; } }
   header .logo img {
     width: 60px; }
+    @media (max-width: 800px) {
+      header .logo img {
+        width: 47px; } }
+
+header .sp_menu {
+  display: none;
+  width: 25px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 25px; }
+  @media (max-width: 800px) {
+    header .sp_menu {
+      display: block; } }
+  @media (max-width: 800px) {
+    header .sp_menu img {
+      width: 25px; } }
+
+@media (max-width: 800px) {
+  header .wrap-menu {
+    display: none; } }
 
 header .menu01 {
   float: left;
   margin: 30px 0px 30px 50px;
   overflow: hidden;
   padding-left: 0; }
+  @media (max-width: 800px) {
+    header .menu01 {
+      float: none;
+      margin: 0px; } }
   header .menu01 li {
     margin-left: 30px; }
     header .menu01 li:first-child {
@@ -255,18 +305,30 @@ header .menu01 {
     header .menu01 li.active a {
       border-bottom: 1px solid;
       padding-bottom: 6px; }
+    @media (max-width: 800px) {
+      header .menu01 li {
+        margin-left: 0; } }
 
 header .menu02 {
   float: right;
   padding-left: 0;
   margin: 25px 0;
   position: relative; }
+  @media (max-width: 800px) {
+    header .menu02 {
+      float: none;
+      border: none;
+      margin: 0 0 60px; } }
   header .menu02 li {
     margin-left: 10px;
     border: 1px solid #b5b5b6;
     padding: 8px 0px;
     width: 145px;
     text-align: center; }
+    @media (max-width: 800px) {
+      header .menu02 li {
+        margin-left: 0;
+        width: 100%; } }
     header .menu02 li a {
       width: 100%;
       height: 100%;
@@ -289,15 +351,34 @@ header .menu02 {
     top: 42px;
     z-index: 100;
     display: none; }
+    @media (max-width: 800px) {
+      header .menu02 .inner_menu {
+        display: block;
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-left: 10px; } }
     header .menu02 .inner_menu li {
       margin-left: 0;
       display: block;
       background: #fff;
       font-weight: normal; }
+      @media (max-width: 800px) {
+        header .menu02 .inner_menu li {
+          padding-left: 10px;
+          border-bottom: none;
+          padding-bottom: 0; } }
       header .menu02 .inner_menu li.active {
         background: #595757; }
+        @media (max-width: 800px) {
+          header .menu02 .inner_menu li.active {
+            background: #fff;
+            font-weight: bold; } }
         header .menu02 .inner_menu li.active a {
           color: #fff; }
+          @media (max-width: 800px) {
+            header .menu02 .inner_menu li.active a {
+              color: #000; } }
 
 footer {
   position: relative; }
@@ -317,9 +398,17 @@ footer {
   overflow: hidden; }
   .message.inner {
     padding: 60px 80px 80px; }
+    @media (max-width: 800px) {
+      .message.inner {
+        padding: 60px 30px 60px; } }
   .message h2 {
     padding-top: 48px;
     text-align: left; }
+    @media (max-width: 800px) {
+      .message h2 {
+        width: 212px;
+        text-align: center;
+        margin: 0 auto; } }
   .message .left {
     float: left; }
   .message .right {
