@@ -21,6 +21,7 @@ $(function(){
   });
 
   //------ drop motion ------//
+if($('#motion').length){
   thisOffset = $('#motion').offset().top + $('#motion').outerHeight();
 
   $(window).scroll(function(){
@@ -32,6 +33,18 @@ $(function(){
       // 特定の要素を超えていない
     }
   });
+}
+//------ drop motion ------//
+$('.havemenu').hover(
+    function() {
+        //マウスカーソルが重なった時の処理
+        $('.inner_menu').slideDown();
+    },
+    function() {
+        //マウスカーソルが離れた時の処理
+        $('.inner_menu').slideUp();
+    }
+);
 
 });
 
