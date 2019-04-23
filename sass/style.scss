@@ -64,6 +64,15 @@ h3 {
   font-weight: normal;
   line-height: 1.73;
   letter-spacing: 0.1em;
+  .mark {
+    position: relative;
+    &:before {
+      content: url("../images/mark.png");
+      position: absolute;
+      top: -35px;
+      left: -7px;
+    }
+  }
 }
 h4 {
   /*font-size: 25px;*/
@@ -168,6 +177,32 @@ h4 {
     &:first-child {
       margin-bottom: 20px;
       width: 5px;
+    }
+  }
+}
+.video_button {
+  position: absolute;
+  bottom: 30px;
+  top: auto;
+  left: auto;
+  right: 10%;
+  -webkit-transform: translate(-50%, 0%);
+  -ms-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+  overflow: hidden;
+  width: 165px;
+  img {
+    float: left;
+    &.btn_stop {
+      width: 52px;
+    }
+    &.btn_off {
+      width: 95px;
+      height: 43px;
+      margin: 5px 0 5px 15px;
+    }
+    &:hover {
+      cursor: pointer;
     }
   }
 }
@@ -1355,25 +1390,19 @@ footer {
     }
   }
   &:before {
-    height: 0;
+    content: url("../images/company/line01.png");
     display: block;
     position: absolute;
-    right: -3px;
-    content: "";
-    border-top: solid 50px #fff;
-    border-left: solid 50px transparent;
-    top: -4px;
+    right: -20px;
+    top: -20px;
     z-index: 2;
   }
   &:after {
-    height: 0;
+    content: url("../images/company/line02.png");
     display: block;
     position: absolute;
-    content: "";
-    border-bottom: 40px solid #FFF;
-    border-right: 40px solid transparent;
-    bottom: 0px;
-    left: 0;
+    bottom: -30px;
+    left: -20px;
   }
 }
 .space_block {
