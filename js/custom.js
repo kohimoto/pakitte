@@ -44,10 +44,10 @@ if($('#motion').length){
   $(setImg).children('img').css({opacity:'0'});
   $(window).scroll(function(){
     if( $(window).scrollTop() + $(window).height() > thisOffset){
-      setTimeout('move01()', 1000);
-      setTimeout('move02()', 2000);
-      setTimeout('move03()', 3000);
-      setTimeout('move04()', 4000);
+      setTimeout('move01()', 6000);
+      setTimeout('move02()', 6500);
+      setTimeout('move03()', 7000);
+      setTimeout('move04()', 8000);
     } else {
       // 特定の要素を超えていない
     }
