@@ -571,8 +571,8 @@ footer {
       top: 0;
       left: 0; }
       .product #motion .wrap_motion div .move_01.disapper {
-        -webkit-animation: disapperAnimation 1.5s ease-in-out 0s forwards;
-        animation: disapperAnimation 1.5s ease-in-out 0s forwards; }
+        -webkit-animation: disapperAnimation 1.0s ease-in-out 0s forwards;
+        animation: disapperAnimation 1.0s ease-in-out 0s forwards; }
     .product #motion .wrap_motion div .move_02 {
       position: absolute;
       top: 0;
