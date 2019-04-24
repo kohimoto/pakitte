@@ -21,35 +21,33 @@ $(function(){
   });
 
 //------ logo motion ------//
+
+  if($('#viewer').length){
     var setImg = '#viewer';
-    var fadeSpeed = 500;
-    var switchDelay = 500;
-    var cnt = 0;
+    var counter = 0;
+    thisOffsetLogo = $('#viewer').offset().top + $('#viewer').outerHeight();
+    $(window).scroll(function(){
+    if( $(window).scrollTop() + $(window).height() > thisOffsetLogo  ){
+      moveLogo(setImg);
+      counter++;
+    } else {
+    // 特定の要素を超えていない
+    }
 
-    $(setImg).children('img').css({opacity:'0'});
-    $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+    });
+  }
 
-    setInterval(function(){
-      if(cnt == '7') {
-        exit;
-      }
-      if($(setImg + ' :first-child').hasClass('o0')) {
-        $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
-      } else {
-        $(setImg + ' :first-child').next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
-      }
-      cnt ++;
-    },switchDelay);
 
 //------ drop motion ------//
 if($('#motion').length){
   thisOffset = $('#motion').offset().top + $('#motion').outerHeight();
-
+  $(setImg).children('img').css({opacity:'0'});
   $(window).scroll(function(){
     if( $(window).scrollTop() + $(window).height() > thisOffset){
       setTimeout('move01()', 1000);
       setTimeout('move02()', 2000);
       setTimeout('move03()', 3000);
+      setTimeout('move04()', 4000);
     } else {
       // 特定の要素を超えていない
     }
@@ -116,6 +114,11 @@ function move03() {
   $('.move_03').addClass('disapper');
   $('.move_03').removeClass('none');
 }
+function move04() {
+  $('.move_05').addClass('apper');
+  $('.move_04').addClass('disapper');
+  $('.move_04').removeClass('none');
+}
 
 //----- movie switch -------//
 function pauseVideo(v) {
@@ -125,4 +128,25 @@ function pauseVideo(v) {
 function playVideo(v) {
 	v.play();
 }
+
+function moveLogo (setImg) {
+      //var setImg = '#viewer';
+      var fadeSpeed = 500;
+      var switchDelay = 500;
+      var cnt = 0;
+
+      $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
+      setInterval(function(){
+        if(cnt == '7') {
+          exit;
+        }
+        if($(setImg + ' :first-child').hasClass('o0')) {
+          $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+        } else {
+          $(setImg + ' :first-child').next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+        }
+        cnt ++;
+      },switchDelay);
+}
+
 //----- //FUNCTION--------//
