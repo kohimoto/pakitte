@@ -411,7 +411,7 @@ header .menu02 {
 footer {
   position: relative; }
   footer .container {
-    margin: 0 auto 80px;
+    margin: 0 auto 70px;
     position: relative; }
     footer .container p {
       font-size: 0.75rem;
@@ -963,7 +963,8 @@ footer {
   color: #377238; }
 
 .history .h_line {
-  background: #54c3f1; }
+  background: #54c3f1;
+  margin: 70px 0 50px; }
 
 .history .box {
   padding: 0 60px;
@@ -984,7 +985,7 @@ footer {
     padding: 40px 50px; }
     .map_area .map_box .inner_map p {
       text-align: left;
-      line-height: 1.8125; }
+      line-height: 1.75; }
       .map_area .map_box .inner_map p.ttl {
         padding-bottom: 40px;
         font-size: 1.0625rem;
@@ -992,11 +993,14 @@ footer {
         .map_area .map_box .inner_map p.ttl span {
           font-size: 1.75rem;
           font-weight: bold;
-          line-height: 1.607; }
+          line-height: 1.607;
+          color: #231815;
+          vertical-align: middle;
+          padding-bottom: 5px; }
     .map_area .map_box .inner_map .right {
       text-align: left;
-      width: calc(50% - 55px);
-      margin-left: 55px; }
+      width: calc(50% - 50px);
+      margin-left: 50px; }
 
 .blue_line {
   width: 100%;
@@ -1005,7 +1009,7 @@ footer {
   font-size: 1.75rem;
   line-height: 1.607;
   font-weight: bold;
-  background: url("../images/company/box01.png");
+  background: url("../images/company/box01.gif");
   color: #036eb7;
   border-color: #036eb7;
   letter-spacing: 0.15em;
@@ -1013,7 +1017,7 @@ footer {
   .blue_line.skyblue {
     color: #54c3f1;
     border-color: #54c3f1;
-    background: url("../images/company/box02.png"); }
+    background: url("../images/company/box02.gif"); }
 
 .txt {
   font-size: 1.0625rem;
@@ -1150,7 +1154,9 @@ footer {
       border-radius: 100%;
       color: #fff;
       font-size: 0.9375rem;
-      line-height: 1.8; }
+      line-height: 1.8;
+      font-weight: bold;
+      letter-spacing: 0.05em; }
       .circle_area ul li:first-child {
         margin-left: 0; }
       .circle_area ul li.skyblue {
@@ -1192,20 +1198,20 @@ footer {
     content: url("../images/company/line01.png");
     display: block;
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: -10px;
+    top: -10px;
     z-index: 2; }
   .strong_area:after {
     content: url("../images/company/line02.png");
     display: block;
     position: absolute;
-    bottom: -30px;
-    left: -20px; }
+    bottom: -23px;
+    left: -10px; }
 
 .space_block h4.color {
   font-size: 1.5625rem;
   color: #1D2087;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   font-weight: bold; }
 
 .space_block h4.no_top {
@@ -1215,7 +1221,7 @@ footer {
   width: 10px;
   height: 10px;
   background: #54C3F1;
-  margin: 40px auto 30px; }
+  margin: 50px auto 50px; }
 
 .csr h4 {
   padding-top: 0; }
@@ -1288,8 +1294,8 @@ footer {
       line-height: 1.5625rem;
       background: #54c3f1;
       color: #fff;
-      font-size: 0.9375rem;
-      padding: 17px 0; }
+      padding: 17px 0;
+      font-weight: bold; }
       .efforts_area ul .inner_left span {
         font-size: 1.25rem; }
     .efforts_area ul .inner_right {
@@ -1316,7 +1322,8 @@ footer {
     text-align: left;
     font-weight: normal;
     color: #1567A8;
-    border-bottom: 1px dashed #1567A8; }
+    border-bottom: 1px dashed #1567A8;
+    line-height: 3; }
   .efforts02 .box {
     margin-bottom: 20px; }
     .efforts02 .box .inner_right {
@@ -1326,6 +1333,10 @@ footer {
       width: 72%; }
       .efforts02 .box .inner_txt p {
         padding: 20px 0; }
+
+.privacy h2 {
+  font-size: 1.625rem;
+  color: #1D2087; }
 
 .privacy h3 {
   font-size: 1.25rem;
