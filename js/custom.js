@@ -21,19 +21,25 @@ $(function(){
   });
 
 //------ logo motion ------//
-$(function(){
     var setImg = '#viewer';
-    var fadeSpeed = 2000;
-    var switchDelay = 2000;
+    var fadeSpeed = 500;
+    var switchDelay = 500;
+    var cnt = 0;
 
     $(setImg).children('img').css({opacity:'0'});
     $(setImg + ' img:first').stop().animate({opacity:'1',zIndex:'20'},fadeSpeed);
 
     setInterval(function(){
+      if(cnt == '7') {
+        exit;
+      }
+      if($(setImg + ' :first-child').hasClass('o0')) {
         $(setImg + ' :first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
-//        $(setImg + ' .o0:first-child').animate({opacity:'0'},fadeSpeed).next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+      } else {
+        $(setImg + ' :first-child').next('img').animate({opacity:'1'},fadeSpeed).end().appendTo(setImg);
+      }
+      cnt ++;
     },switchDelay);
-});
 
 //------ drop motion ------//
 if($('#motion').length){
