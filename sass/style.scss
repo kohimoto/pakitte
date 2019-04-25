@@ -1575,7 +1575,7 @@ footer {
   .inner  {
     padding: 80px 80px;
     @include sp {
-    padding: 50px 40px 0;
+      padding: 50px 40px 0;
     }
   }
   h3 {
@@ -1593,6 +1593,7 @@ footer {
     margin-bottom: 80px;
     @include sp {
       text-align: left;
+      margin-bottom: 40px;
     }
     br {
       @include sp {
@@ -1793,6 +1794,9 @@ footer {
   border-color: #036eb7;
   letter-spacing: 0.15em;
   margin-bottom: 40px;
+  @include sp {
+    font-size: 1rem;
+  }
   &.skyblue {
     color: #54c3f1;
     border-color: #54c3f1;
@@ -1802,6 +1806,9 @@ footer {
 .txt {
   font-size: 1.0625rem;
   line-height: 2.118;
+  @include sp {
+    line-height: 1.715rem;
+  }
   .blue {
     color: #036eb7;
   }
@@ -1810,6 +1817,9 @@ footer {
   border: 2px solid #036eb7;
   font-size: 1.125rem;
   margin: 40px 0 100px;
+  @include sp {
+    margin: 30px 0 30px;
+  }
   dl {
     overflow: hidden;
     display: -webkit-box;
@@ -1843,8 +1853,9 @@ footer {
       font-weight: bold;
       padding: 10px 0;
       @include sp {
-        width: 25%;
+        width: calc(28% - 10px);
         font-size: 0.9285rem;
+        padding: 0;
       }
     }
     dd {
@@ -1852,17 +1863,29 @@ footer {
       text-align: left;
       border-bottom: 1px solid #036eb7;
       @include sp {
-        width: 75%;
+        width: 72%;
+        font-size: 0.9375rem;
+        line-height: 0;
+        margin: 0 5px;
       }
       p {
         margin: 10px 20px 10px 20px;
         @include sp {
           font-size: 0.9285rem;
+          display: inline;
+          border-bottom: dashed 1px #036eb7;
+          padding-bottom: 8px;
+          line-height: 2.3077;
+          margin: 0;
         }
         span {
           display: block;
-          border-top: dashed 1px #1d2087;
+          border-top: dashed 1px #036eb7;
           padding-top: 5px;
+          @include sp {
+            border-top: none;
+            display: inline;
+          }
         }
         img {
           margin: 20px 60px 10px;
@@ -1895,6 +1918,9 @@ footer {
       dt {
         background: transparent;
         border-bottom: 1px solid #1d2087;
+        @include sp {
+          width: calc(25% - 5px);
+        }
         &.b_01 {
           color: #2ca6e0;
         }
@@ -1918,7 +1944,8 @@ footer {
         border-color: #1d2087;
         font-size: 0.9375rem;
         @include sp {
-          line-height: 2.3077;
+          line-height: 0;
+          margin: 0 5px 0 0;
         }
         p {
           margin: 10px 0px 10px 0px;
@@ -1926,9 +1953,10 @@ footer {
             border-bottom: dashed 1px #1d2087;
             display: inline;
             padding-bottom: 8px;
+            line-height: 2.3077;
           }
           span {
-            border-color: #1d2087;
+            border-top: dashed 1px #1d2087;
             margin-right: 30px;
             @include sp {
               display: inline;
@@ -2385,11 +2413,17 @@ footer {
   h2{
     font-size: 1.625rem;
     color: #1D2087;
+      @include sp {
+        font-size: 1.215rem;
+      }
   }
   h3 {
     font-size: 1.25rem;
     color: #1D2087;
     padding-top: 0;
+    @include sp {
+      font-size: 1rem;
+    }
   }
   .poricy_txt {
     text-align: left;
@@ -2397,5 +2431,17 @@ footer {
     margin: 80px auto 0;
     letter-spacing: 0.02em;
     line-height: 1.572;
+    @include sp {
+      margin-top: 40px;
+    }
+  }
+}
+.recruit {
+  .txt {
+    .blue {
+      @include sp {
+        text-align: left;
+      }
+    }
   }
 }

@@ -1317,7 +1317,8 @@ footer {
   margin-bottom: 80px; }
   @media (max-width: 800px) {
     .other .h_txt {
-      text-align: left; } }
+      text-align: left;
+      margin-bottom: 40px; } }
   @media (max-width: 800px) {
     .other .h_txt br {
       display: none; } }
@@ -1463,6 +1464,9 @@ footer {
   border-color: #036eb7;
   letter-spacing: 0.15em;
   margin-bottom: 40px; }
+  @media (max-width: 800px) {
+    .blue_line {
+      font-size: 1rem; } }
   .blue_line.skyblue {
     color: #54c3f1;
     border-color: #54c3f1;
@@ -1471,6 +1475,9 @@ footer {
 .txt {
   font-size: 1.0625rem;
   line-height: 2.118; }
+  @media (max-width: 800px) {
+    .txt {
+      line-height: 1.715rem; } }
   .txt .blue {
     color: #036eb7; }
 
@@ -1478,6 +1485,9 @@ footer {
   border: 2px solid #036eb7;
   font-size: 1.125rem;
   margin: 40px 0 100px; }
+  @media (max-width: 800px) {
+    .tbl {
+      margin: 30px 0 30px; } }
   .tbl dl {
     overflow: hidden;
     display: -webkit-box;
@@ -1510,24 +1520,37 @@ footer {
       padding: 10px 0; }
       @media (max-width: 800px) {
         .tbl dl dt {
-          width: 25%;
-          font-size: 0.9285rem; } }
+          width: calc(28% - 10px);
+          font-size: 0.9285rem;
+          padding: 0; } }
     .tbl dl dd {
       width: 85%;
       text-align: left;
       border-bottom: 1px solid #036eb7; }
       @media (max-width: 800px) {
         .tbl dl dd {
-          width: 75%; } }
+          width: 72%;
+          font-size: 0.9375rem;
+          line-height: 0;
+          margin: 0 5px; } }
       .tbl dl dd p {
         margin: 10px 20px 10px 20px; }
         @media (max-width: 800px) {
           .tbl dl dd p {
-            font-size: 0.9285rem; } }
+            font-size: 0.9285rem;
+            display: inline;
+            border-bottom: dashed 1px #036eb7;
+            padding-bottom: 8px;
+            line-height: 2.3077;
+            margin: 0; } }
         .tbl dl dd p span {
           display: block;
-          border-top: dashed 1px #1d2087;
+          border-top: dashed 1px #036eb7;
           padding-top: 5px; }
+          @media (max-width: 800px) {
+            .tbl dl dd p span {
+              border-top: none;
+              display: inline; } }
         .tbl dl dd p img {
           margin: 20px 60px 10px; }
           @media (max-width: 800px) {
@@ -1548,6 +1571,9 @@ footer {
     .tbl.mix dl dt {
       background: transparent;
       border-bottom: 1px solid #1d2087; }
+      @media (max-width: 800px) {
+        .tbl.mix dl dt {
+          width: calc(25% - 5px); } }
       .tbl.mix dl dt.b_01 {
         color: #2ca6e0; }
       .tbl.mix dl dt.b_02 {
@@ -1564,16 +1590,18 @@ footer {
       font-size: 0.9375rem; }
       @media (max-width: 800px) {
         .tbl.mix dl dd {
-          line-height: 2.3077; } }
+          line-height: 0;
+          margin: 0 5px 0 0; } }
       .tbl.mix dl dd p {
         margin: 10px 0px 10px 0px; }
         @media (max-width: 800px) {
           .tbl.mix dl dd p {
             border-bottom: dashed 1px #1d2087;
             display: inline;
-            padding-bottom: 8px; } }
+            padding-bottom: 8px;
+            line-height: 2.3077; } }
         .tbl.mix dl dd p span {
-          border-color: #1d2087;
+          border-top: dashed 1px #1d2087;
           margin-right: 30px; }
           @media (max-width: 800px) {
             .tbl.mix dl dd p span {
@@ -1960,11 +1988,17 @@ footer {
 .privacy h2 {
   font-size: 1.625rem;
   color: #1D2087; }
+  @media (max-width: 800px) {
+    .privacy h2 {
+      font-size: 1.215rem; } }
 
 .privacy h3 {
   font-size: 1.25rem;
   color: #1D2087;
   padding-top: 0; }
+  @media (max-width: 800px) {
+    .privacy h3 {
+      font-size: 1rem; } }
 
 .privacy .poricy_txt {
   text-align: left;
@@ -1972,3 +2006,10 @@ footer {
   margin: 80px auto 0;
   letter-spacing: 0.02em;
   line-height: 1.572; }
+  @media (max-width: 800px) {
+    .privacy .poricy_txt {
+      margin-top: 40px; } }
+
+@media (max-width: 800px) {
+  .recruit .txt .blue {
+    text-align: left; } }
