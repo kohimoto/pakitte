@@ -1586,6 +1586,7 @@ footer {
     padding-top: 40px;
     @include sp {
       padding-top: 25px;
+      font-size: 1.143rem;
     }
   }
   .h_txt {
@@ -1932,28 +1933,48 @@ footer {
     }
   }
   .num {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: #54c3f1;
-    display: block;
+  width: 80px;
+  height: 80px;
+  background: #54c3f1;
+  display: block;
+  float: left;
+  position: relative;
+    @include sp {
+      width: 30px;
+      height: 80px;
+    }
     &+p {
-      position: absolute;
+      /*position: absolute;
       top: 50%;
       left: 50%;
       -ms-transform: translate(-45%,-50%);
       -webkit-transform: translate(-45%,-50%);
       transform: translate(-45%,-50%);
-      width: 90%;
+      width: 90%;*/
+      width: calc(100% - 80px);
       text-align: left;
       letter-spacing: 0.04em;
       font-size: 0.9375rem;
+      position: relative;
+      float: right;
+      span {
+        margin: 23px 0px 23px 20px;
+        display: block;
+      }
+    }
+    img {
+      @include sp {
+        height: 20px;
+      }
     }
   }
 }
 .txt_20 {
   font-size: 1.25rem;
   line-height: 1.9;
+  @include sp {
+    font-size: 1rem;
+  }
 }
 .circle_area {
   margin-top: 30px;
@@ -1972,8 +1993,16 @@ footer {
       line-height: 1.8;
       font-weight: bold;
       letter-spacing: 0.05em;
+      @include sp {
+        float: none;
+        margin-left: 0;
+        margin: 0 auto 20px;
+      }
       &:first-child {
         margin-left: 0;
+        @include sp {
+          margin: 0 auto 20px;
+        }
       }
       &.skyblue {
         background: #54C3F1;
@@ -2012,6 +2041,10 @@ footer {
       margin-left: 40px;
       height: 152px;
       position: relative;
+      @include sp {
+        width: 100%;
+        margin: 25px 24px;
+      }
       &:last-child {
         margin-right: 40px;
       }
@@ -2020,7 +2053,14 @@ footer {
         line-height: 1.8;
         letter-spacing: 0.05em;
         width: 100%;
-
+        @include sp {
+          text-align: left;
+          br {
+            @include sp {
+              display: none;
+            }
+          }
+        }
       }
     }
   }
@@ -2047,6 +2087,9 @@ footer {
       color: #1D2087;
       padding-bottom: 0px;
       font-weight: bold;
+      @include sp {
+        font-size: 1.179rem;
+      }
     }
     &.no_top {
       padding-top: 0;
@@ -2058,6 +2101,9 @@ footer {
   height: 10px;
   background: #54C3F1;
   margin: 50px auto 50px;
+  @include sp {
+    margin: 30px auto 30px;
+  }
 }
 .csr {
   h4 {
@@ -2066,6 +2112,9 @@ footer {
   .h_txt {
     margin-top: 60px;
     margin-bottom: 0;
+    @include sp {
+      margin-top: 35px;
+    }
   }
 }
 .topmessage {
@@ -2108,11 +2157,31 @@ footer {
 .efforts_area {
   overflow: hidden;
   margin-top: 20px;
+  @include sp {
+    margin-top: 30px;
+  }
   .left {
     width: calc(76.65% - 20px);
+    @include sp{
+      float: none;
+      width: 100%;
+      margin-top: 30px;
+    }
   }
   .right {
     width: 23.35%;
+    @include sp{
+      float: none;
+      width: 100%;
+    }
+  }
+  .img {
+    img {
+      @include sp{
+        width: 100%;
+        display: block;
+      }
+    }
   }
   ul {
     overflow: hidden;
@@ -2135,6 +2204,9 @@ footer {
     -moz-flex-wrap:wrap;
     -ms-flex-wrap:wrap;
     flex-wrap:wrap;
+    @include sp {
+      margin-bottom: 15px;
+    }
     .inner_left {
       width: 34%;
       float: left;
@@ -2143,13 +2215,26 @@ footer {
       color: #fff;
       padding: 17px 0;
       font-weight: bold;
+      @include sp{
+        float: none;
+        width: 100%;
+        font-size: 1.143rem;
+        line-height: 1.5635;
+      }
       span {
         font-size: 1.25rem;
+        @include sp{
+          font-size: 1.429rem;
+        }
       }
     }
     .inner_right{
       width: 66%;
       float: left;
+      @include sp{
+        float: none;
+        width: 100%;
+      }
       p {
           line-height: 1.6875;
           text-align: left;
@@ -2157,6 +2242,10 @@ footer {
           /*letter-spacing: 0.05em;*/
           letter-spacing: 0.03em;
           font-size: 0.9375rem;
+          @include sp{
+            font-size: 1rem;
+            padding: 20px 15px 30px 15px;
+          }
       }
     }
     &.dark {
@@ -2181,17 +2270,39 @@ footer {
     color: #1567A8;
     border-bottom: 1px dashed #1567A8;
     line-height: 3;
+    @include sp {
+      font-size: 1.0715rem;
+    }
   }
   .box {
     margin-bottom: 20px;
    .inner_right {
     margin-left: 60px;
     float: right;
+    @include sp {
+      float: none;
+      margin-left: 0;
+    }
     }
     .inner_txt {
       width: 72%;
+      @include sp {
+        width: 100%;
+        margin-top: 5px;
+      }
       p {
         padding: 20px 0;
+        @include sp {
+          padding: 20px 0 0;
+        }
+      }
+    }
+    .inner_img {
+      img {
+        @include sp {
+          width: 180px;
+          margin: 0 auto;
+        }
       }
     }
   }
