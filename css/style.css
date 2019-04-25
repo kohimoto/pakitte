@@ -1642,6 +1642,9 @@ footer {
   color: #1D2087;
   padding-bottom: 0px;
   font-weight: bold; }
+  @media (max-width: 800px) {
+    .space_block h4.color {
+      font-size: 1.179rem; } }
 
 .space_block h4.no_top {
   padding-top: 0; }
@@ -1651,6 +1654,9 @@ footer {
   height: 10px;
   background: #54C3F1;
   margin: 50px auto 50px; }
+  @media (max-width: 800px) {
+    .space_box {
+      margin: 30px auto 30px; } }
 
 .csr h4 {
   padding-top: 0; }
@@ -1658,6 +1664,9 @@ footer {
 .csr .h_txt {
   margin-top: 60px;
   margin-bottom: 0; }
+  @media (max-width: 800px) {
+    .csr .h_txt {
+      margin-top: 35px; } }
 
 .topmessage {
   max-width: 860px;
@@ -1692,10 +1701,26 @@ footer {
 .efforts_area {
   overflow: hidden;
   margin-top: 20px; }
+  @media (max-width: 800px) {
+    .efforts_area {
+      margin-top: 30px; } }
   .efforts_area .left {
     width: calc(76.65% - 20px); }
+    @media (max-width: 800px) {
+      .efforts_area .left {
+        float: none;
+        width: 100%;
+        margin-top: 30px; } }
   .efforts_area .right {
     width: 23.35%; }
+    @media (max-width: 800px) {
+      .efforts_area .right {
+        float: none;
+        width: 100%; } }
+  @media (max-width: 800px) {
+    .efforts_area .img img {
+      width: 100%;
+      display: block; } }
   .efforts_area ul {
     overflow: hidden;
     /*margin-bottom: 20px;*/
@@ -1717,6 +1742,9 @@ footer {
     -moz-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap; }
+    @media (max-width: 800px) {
+      .efforts_area ul {
+        margin-bottom: 15px; } }
     .efforts_area ul .inner_left {
       width: 34%;
       float: left;
@@ -1725,11 +1753,24 @@ footer {
       color: #fff;
       padding: 17px 0;
       font-weight: bold; }
+      @media (max-width: 800px) {
+        .efforts_area ul .inner_left {
+          float: none;
+          width: 100%;
+          font-size: 1.143rem;
+          line-height: 1.5635; } }
       .efforts_area ul .inner_left span {
         font-size: 1.25rem; }
+        @media (max-width: 800px) {
+          .efforts_area ul .inner_left span {
+            font-size: 1.429rem; } }
     .efforts_area ul .inner_right {
       width: 66%;
       float: left; }
+      @media (max-width: 800px) {
+        .efforts_area ul .inner_right {
+          float: none;
+          width: 100%; } }
       .efforts_area ul .inner_right p {
         line-height: 1.6875;
         text-align: left;
@@ -1737,6 +1778,10 @@ footer {
         /*letter-spacing: 0.05em;*/
         letter-spacing: 0.03em;
         font-size: 0.9375rem; }
+        @media (max-width: 800px) {
+          .efforts_area ul .inner_right p {
+            font-size: 1rem;
+            padding: 20px 15px 30px 15px; } }
     .efforts_area ul.dark {
       background: rgba(21, 103, 168, 0.2); }
       .efforts_area ul.dark .inner_left {
@@ -1753,15 +1798,33 @@ footer {
     color: #1567A8;
     border-bottom: 1px dashed #1567A8;
     line-height: 3; }
+    @media (max-width: 800px) {
+      .efforts02 h5 {
+        font-size: 1.0715rem; } }
   .efforts02 .box {
     margin-bottom: 20px; }
     .efforts02 .box .inner_right {
       margin-left: 60px;
       float: right; }
+      @media (max-width: 800px) {
+        .efforts02 .box .inner_right {
+          float: none;
+          margin-left: 0; } }
     .efforts02 .box .inner_txt {
       width: 72%; }
+      @media (max-width: 800px) {
+        .efforts02 .box .inner_txt {
+          width: 100%;
+          margin-top: 5px; } }
       .efforts02 .box .inner_txt p {
         padding: 20px 0; }
+        @media (max-width: 800px) {
+          .efforts02 .box .inner_txt p {
+            padding: 20px 0 0; } }
+    @media (max-width: 800px) {
+      .efforts02 .box .inner_img img {
+        width: 180px;
+        margin: 0 auto; } }
 
 .privacy h2 {
   font-size: 1.625rem;
