@@ -2109,10 +2109,6 @@ footer {
   color: #1D2087;
   margin-top: 70px;
   position: relative;
-  h4 {
-    padding-bottom: 25px;
-    padding-top: 35px;
-  }
   .box03 {
     margin-top: 0;
     padding-bottom: 35px;
@@ -2163,6 +2159,12 @@ footer {
   }
 }
 .space_block {
+  .strong_area {
+    h4.color {
+      padding-bottom: 25px;
+      padding-top: 35px;
+    }
+  }
   h4 {
     &.color {
       font-size: 1.5625rem;
