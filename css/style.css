@@ -475,7 +475,8 @@ footer {
       margin: 0 40px; } }
   footer .container {
     margin: 0 auto 70px;
-    position: relative; }
+    position: relative;
+    width: 1264px; }
     @media (max-width: 800px) {
       footer .container {
         margin-bottom: 20px; } }
@@ -486,11 +487,13 @@ footer {
       width: 80px;
       position: absolute;
       right: 0;
-      bottom: 0; }
+      bottom: 0;
+      padding-right: 2rem; }
       @media (max-width: 800px) {
         footer .container .go_top {
           width: 42px;
-          bottom: 35px; } }
+          bottom: 35px;
+          padding-right: 0; } }
 
 .message {
   overflow: hidden; }
@@ -1395,11 +1398,22 @@ footer {
 .history .box {
   padding: 0 60px;
   margin-bottom: 0; }
+  .history .box .inner_img {
+    width: calc(100% - 73%); }
+    @media (max-width: 800px) {
+      .history .box .inner_img {
+        width: auto; } }
   .history .box .inner_txt {
-    width: 600px; }
+    max-width: 67%;
+    width: 100%; }
   .history .box .inner_right {
-    margin-left: 60px;
+    margin-left: 6%;
     float: right; }
+    .history .box .inner_right.a p {
+      padding-top: 2.7rem; }
+      @media (max-width: 800px) {
+        .history .box .inner_right.a p {
+          padding-top: 0rem; } }
 
 .map_area .map_box {
   background: #eeeeef;
@@ -1450,6 +1464,13 @@ footer {
     @media (max-width: 800px) {
       .map_area .map_box .inner_map img {
         max-width: 100%; } }
+    .map_area .map_box .inner_map .left {
+      width: 50%; }
+      .map_area .map_box .inner_map .left img {
+        width: 100%; }
+      @media (max-width: 800px) {
+        .map_area .map_box .inner_map .left {
+          width: auto; } }
 
 .blue_line {
   width: 100%;
@@ -1549,7 +1570,7 @@ footer {
       border-color: #1d2087;
       font-size: 0.9375rem; }
       .tbl.mix dl dd p {
-        margin: 10px 0px 10px 0px; }
+        margin: 10px 30px 10px 0px; }
         .tbl.mix dl dd p span {
           border-color: #1d2087; }
 
@@ -1859,12 +1880,27 @@ footer {
   .efforts02 .box {
     margin-bottom: 20px; }
     .efforts02 .box .inner_right {
-      margin-left: 60px;
-      float: right; }
+      margin-left: 5.7629%;
+      float: right;
+      width: 21.25%; }
+      .efforts02 .box .inner_right img {
+        width: 100%; }
       @media (max-width: 800px) {
         .efforts02 .box .inner_right {
           float: none;
-          margin-left: 0; } }
+          margin-left: 0;
+          width: auto; }
+          .efforts02 .box .inner_right img {
+            width: auto; } }
+    .efforts02 .box .inner_img {
+      width: 21.25%; }
+      .efforts02 .box .inner_img img {
+        width: 100%; }
+      @media (max-width: 800px) {
+        .efforts02 .box .inner_img {
+          width: auto; }
+          .efforts02 .box .inner_img img {
+            width: auto; } }
     .efforts02 .box .inner_txt {
       width: 72%; }
       @media (max-width: 800px) {
