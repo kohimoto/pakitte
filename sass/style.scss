@@ -542,6 +542,7 @@ footer {
   .container {
     margin: 0 auto 70px;
     position: relative;
+    width: 1264px;
     @include sp {
       margin-bottom: 20px;
     }
@@ -554,9 +555,11 @@ footer {
       position: absolute;
       right: 0;
       bottom: 0;
+      padding-right: 2rem;
       @include sp {
         width: 42px;
         bottom: 35px;
+        padding-right: 0;
       }
     }
   }
@@ -1706,12 +1709,25 @@ footer {
   .box {
     padding: 0 60px;
     margin-bottom: 0;
+    .inner_img{
+      width: calc(100% - 73%);
+      @include sp {
+      width: auto;
+      }
+    }
     .inner_txt {
-      width: 600px;
+      max-width: 67%;
+      width: 100%;
     }
     .inner_right {
-      margin-left: 60px;
+      margin-left: 6%;
       float: right;
+      &.a p{
+        padding-top: 2.7rem;
+        @include sp {
+        padding-top: 0rem;
+        }
+      }
     }
   }
 }
@@ -1778,6 +1794,15 @@ footer {
       @include sp {
         max-width: 100%;
       }
+      }
+      .left {
+        width: 50%;
+        img {
+          width: 100%;
+        }
+        @include sp {
+          width: auto;
+        }
       }
     }
   }
@@ -2379,12 +2404,32 @@ footer {
   .box {
     margin-bottom: 20px;
    .inner_right {
-    margin-left: 60px;
+    margin-left: 5.7629%;
     float: right;
+    width: 21.25%;
+    img {
+      width: 100%;
+    }
     @include sp {
       float: none;
       margin-left: 0;
+      width: auto;
+      img {
+        width: auto;
+      }
     }
+    }
+    .inner_img {
+      width: 21.25%;
+      img {
+        width: 100%;
+      }
+      @include sp {
+        width: auto;
+        img {
+          width: auto;
+        }
+      }
     }
     .inner_txt {
       width: 72%;
