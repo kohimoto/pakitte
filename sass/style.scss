@@ -36,30 +36,35 @@ $sp: 800px;     // sp
 * motion_logo
 * ======================================================= */
 #viewer {
+  margin: 0 auto;
+  width: 300px;
+  height: 300px;
+  text-align: left;
+  overflow: hidden;
+  position: relative;
+  @include sp {
+    width: 180px;
+    height: 180px;
     margin: 0 auto;
-    width: 300px;
-    height: 300px;
-    text-align: left;
-    overflow: hidden;
-    position: relative;
+  }
 }
 
 #viewer img {
-    top: 0;
-    left: 0;
-    position: absolute;
+  top: 0;
+  left: 0;
+  position: absolute;
 }
 #viewer img.r6 {
-    z-index: 1;
+  z-index: 1;
 }
 #viewer img.r5 {
-    z-index: 2;
+  z-index: 2;
 }
 #viewer img.r7 {
-    z-index: 3;
+  z-index: 3;
 }
 #viewer img.r8 {
-    z-index: 4;
+  z-index: 4;
 }
 /* =======================================================
 * common
@@ -69,6 +74,10 @@ html {
   font-family: $font_family;
   line-height: 2.31;
   letter-spacing: 0.08em;
+  @include sp {
+    font-size: 14px;
+    line-height: 1.715;
+  }
 }
 body {
 }
@@ -87,6 +96,7 @@ h2 {
   margin: 0 auto;
     @include sp {
       max-width: 100%;
+      height: 25px;
     }
   }
 }
@@ -96,13 +106,23 @@ h3 {
   font-weight: normal;
   line-height: 1.73;
   letter-spacing: 0.1em;
+  @include sp {
+    font-size: 1.143rem;
+    text-align: center;
+    padding: 20px 0 20px;
+    letter-spacing: 0.08em;
+  }
   .mark {
     position: relative;
+
     &:before {
       content: url("../images/mark.png");
       position: absolute;
       top: -35px;
       left: -7px;
+      @include sp {
+        top: -20px;
+      }
     }
   }
 }
@@ -114,12 +134,18 @@ h4 {
   font-weight: normal;
   padding-bottom: 35px;
   /*letter-spacing: 0.05em;*/
+  @include sp {
+    font-size: 1.143rem;
+  }
 }
 .wrap {
   margin-bottom: 50px;
+  @include sp {
+    margin-bottom: 60px;
+  }
 }
 .red {
-  color: $color_r;
+  color: #e50012;
 }
 .pink {
   color: $color_p;
@@ -157,6 +183,9 @@ h4 {
   }
   .inner {
     padding: 120px 80px;
+    @include sp {
+      padding: 50px 40px 0;
+    }
   }
 }
 .center_center {
@@ -194,6 +223,12 @@ h4 {
     width: 100%;
     display: block;
     max-width: 100%;
+    @include sp {
+      height: 120px;
+      max-width: none;
+      object-fit: cover;
+      object-position: center;
+    }
   }
   &.img {
     img {
@@ -205,6 +240,9 @@ h4 {
   transform: translate(-50%, 0%);
   bottom: 50px;
   top: auto;
+  @include sp {
+    display: none;
+  }
   img {
     display: block;
     margin: 0 auto;
@@ -226,6 +264,9 @@ h4 {
   transform: translate(-50%, 0%);
   overflow: hidden;
   width: 165px;
+  @include sp {
+    display: none;
+  }
   img {
     float: left;
     &.btn_stop {
@@ -247,9 +288,17 @@ h4 {
     width: 732px;
     margin: 0 auto;
     padding: 30px 0;
+    @include sp {
+      max-width: 100%;
+      width: auto;
+      margin: 0 40px;
+    }
     p {
       font-size: 1.5635rem;
       color: #e50012;
+      @include sp {
+        font-size: 1rem;
+      }
     }
   }
 }
@@ -272,6 +321,9 @@ h3.h_line {
   font-weight: bold;
   border-radius: 100px;
   position: relative;
+  @include sp {
+    margin: 20px 0;
+  }
 }
 h3.h_line:before {
   content: "";
@@ -286,6 +338,11 @@ h3.h_line:before {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   text-align: center;
+  @include sp {
+    width: 5px;
+    height: 5px;
+    left: 12px;
+  }
 }
 h3.h_line:after {
   content: "";
@@ -300,6 +357,11 @@ h3.h_line:after {
   -webkit-transform: translate(-50%,-50%);
   transform: translate(-50%,-50%);
   text-align: center;
+  @include sp {
+    width: 5px;
+    height: 5px;
+    right: 8px;
+  }
 }
 header {
   .container {
@@ -476,9 +538,15 @@ header {
 }
 footer {
   position: relative;
+  @include sp {
+    margin: 0 40px;
+  }
   .container {
     margin: 0 auto 90px;
     position: relative;
+    @include sp {
+      margin-bottom: 20px;
+    }
     p {
       font-size: 0.75rem;
       text-align: center;
@@ -488,6 +556,10 @@ footer {
       position: absolute;
       right: 0;
       bottom: 0;
+      @include sp {
+        width: 42px;
+        bottom: 35px;
+      }
     }
   }
 }
@@ -496,29 +568,57 @@ footer {
   &.inner {
     padding: 60px 80px 80px;
     @include sp {
-      padding: 60px 30px 60px;
+      padding: 30px 40px 120px;
+      position: relative;
     }
   }
   h2 {
     padding-top: 48px;
     text-align: left;
     @include sp {
-      width: 212px;
       text-align: center;
       margin: 0 auto;
+      padding-top: 20px;
+    }
+    img {
+      @include sp {
+        width: 280px;
+      }
     }
   }
   .left {
     float: left;
+    p {
+      @include sp {
+        letter-spacing: 0.0em;
+        line-height: 1.715;
+      }
+    }
   }
   .right {
     float: right;
+    @include sp {
+      float: none;
+    }
     img {
       width: 300px;
+      @include sp {
+        width: 180px;
+      }
     }
     p {
       text-align: center;
       line-height: 1.625;
+      @include sp {
+        font-size: 0.9285rem;
+        position: absolute;
+        bottom: 0;
+        -webkit-transform: translate(-50%, -100%);
+        -ms-transform: translate(-50%, -100%);
+        transform: translate(-50%, -100%);
+        width: 100%;
+        left: 50%;
+      }
     }
   }
 }
@@ -526,46 +626,93 @@ footer {
 .scene {
   .inner {
     padding-bottom: 0;
+    h2 {
+      img {
+        @include sp {
+          width: 108px;
+        }
+      }
+    }
     h4 {
       letter-spacing: 0.0em;
+      @include sp {
+        font-size: 1.072rem;
+        padding-bottom: 25px;
+      }
     }
   }
   .ex {
     margin-bottom: 130px;
     letter-spacing: 0.05em;
+    @include sp {
+      line-height: 1.715;
+      text-align: left;
+      margin-bottom: 50px;
+    }
   }
 }
 .box {
   position: relative;
   overflow: hidden;
   margin-bottom: 110px;
+  @include sp {
+    margin-bottom: 40px;
+  }
   &:last-child {
     margin-bottom: 130px;
+    @include sp {
+      margin-bottom: 30px;
+    }
   }
   .inner_img {
     float: left;
+    @include sp {
+      float: none;
+    }
     img {
       display: block;
+      @include sp {
+        width: 100%;
+      }
     }
   }
   .inner_txt {
     float: left;
     width: 375px;
+    @include sp {
+      float: none;
+      width: auto;
+    }
     p {
       text-align: left;
       letter-spacing: 0.05em;
       line-height: 2;
+      @include sp {
+        font-size: 1rem;
+        line-height: 1.715;
+      }
     }
   }
   .inner_right {
     margin-left: 45px;
+    float: right;
+    @include sp {
+      margin-left: 0;
+      float: none;
+    }
   }
   dl {
+    @include sp {
+      margin-top: 30px;
+    }
     dt {
       img {
         display: block;
         text-align: center;
         margin: 0 auto;
+        @include sp {
+          width: 118px;
+        }
       }
     }
     dd {
@@ -574,6 +721,10 @@ footer {
       line-height: 1;
       padding: 35px 0 25px;
       letter-spacing: 0.1em;
+      @include sp {
+        font-size: 1.286rem;
+        padding: 30px 0 15px;
+      }
     }
   }
 }
@@ -583,13 +734,29 @@ footer {
   &.border_p {
     border-color: $color_p;
     margin-bottom: 150px;
+    @include sp {
+      margin-bottom: 35px;
+      margin-left: 40px;
+      margin-right: 40px;
+    }
     .inner_right {
       margin-left: 54px;
+      @include sp {
+        margin-left: 0;
+      }
+      img {
+        @include sp {
+          width: 100%;
+        }
+      }
     }
   }
   .box {
     padding: 30px 75px;
     margin-bottom: 0;
+    @include sp {
+      padding: 15px;
+    }
   }
 }
 .box_half {
@@ -597,10 +764,20 @@ footer {
   /*padding: 0 75px 50px;*/
   width: 875px;
   margin: 0 auto;
+  @include sp {
+    width: auto;
+    max-width: 100%;
+    padding-bottom: 20px;
+  }
   dl {
     width: 380px;
     float: left;
     margin-left: 115px;
+    @include sp {
+      width: auto;
+      float: none;
+      margin-left: 0;
+    }
     &:nth-child(odd) {
       margin-left: 0;
     }
@@ -608,10 +785,16 @@ footer {
       /*border-bottom: 3px solid #e50012;*/
       line-height: 1;
       margin-bottom: 20px;
+      @include sp {
+        font-size: 1.143rem;
+      }
     }
     dd {
       line-height: 1.714;
       margin: 20px 0 60px;
+      @include sp {
+        margin: 10px 0 30px;
+      }
       .line_red {
         display: block;
         width: 100%;
@@ -632,10 +815,18 @@ footer {
 .box02 {
     overflow: hidden;
     margin: 40px 150px 60px;
+    @include sp {
+      margin: 0;
+    }
     .inner_box {
       float: left;
       width: calc(50% - 30px);
       margin-left: 60px;
+      @include sp {
+        float: none;
+        width: 100%;
+        margin-left: 0;
+      }
       &:first-child {
         margin-left: 0;
       }
@@ -647,22 +838,68 @@ footer {
   div.inner_box {
       width: 33.333%;
       float: left;
+      @include sp {
+        width: 100%;
+        float: none;
+        margin-bottom: 25px;
+      }
+      &:last-child {
+        @include sp {
+          margin-bottom: 0;
+        }
+      }
   }
   &.box_type {
     div.inner_box {
       width: calc(33.333% - 40px);
       margin-left: 60px;
+      @include sp {
+        width: 100%;
+        margin-left: 0;
+      }
       &:first-child {
         margin-left: 0;
       }
     }
   }
 }
+.box_size {
+  .inner_box {
+    picture {
+      img {
+        @include sp {
+          width: 100%;
+          display: block;
+        }
+      }
+    }
+  }
+}
 .product  {
   .inner {
+    @include sp {
+      padding-bottom: 65px;
+    }
+    h2 {
+      img {
+      @include sp {
+        width: 153px;
+      }
+      }
+    }
+    p {
+      @include sp {
+        text-align: left;
+      }
+    }
     img {
       &.img_h {
       margin-bottom: 80px;
+      @include sp {
+        width: 213px;
+        margin-bottom: 40px;
+      }
+
       }
 
     }
@@ -678,8 +915,23 @@ footer {
         height: 500px;
         margin-left: 80px;
         width: calc(25% - 60px);
+        @include sp {
+          width: calc(50% - 20px);
+          height: 220px;
+          margin-left: 40px;
+          img {
+            @include sp {
+              width: 100%;
+            }
+          }
+        }
         &:first-child {
           margin-left: 0px;
+        }
+        &:nth-child(odd) {
+          @include sp {
+            margin-left: 0;
+          }
         }
         .move_01 {
           position: absolute;
@@ -743,37 +995,80 @@ footer {
   .inner {
     padding-bottom: 0;
   }
+  h2 {
+    img {
+      @include sp {
+        width: 238px;
+      }
+    }
+  }
   h4 {
     font-size: 1.5625rem;
     padding-bottom: 0px;
     margin-bottom: 60px;
     letter-spacing: 0.1em;
+    @include sp {
+      margin-bottom: 30px;
+      font-size: 1.143rem;
+    }
     &:nth-of-type(2) {
       margin-bottom: 40px;
+      @include sp {
+        margin-bottom: 30px;
+      }
       &+.ex {
         margin-bottom: 90px;
+        @include sp {
+          margin-bottom: 30px;
+        }
       }
     }
   }
   .ex {
     margin-bottom: 110px;
     letter-spacing: 0.05em;
+    @include sp {
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    p {
+      @include sp {
+        text-align: left;
+      }
+    }
   }
   img {
     &.img_dot {
       padding: 48px 0 42px;
       margin: 0 auto;
       display: block;
+      @include sp {
+        width: 7px;
+        padding: 20px 0 20px;
+      }
     }
-    &.img_process {
-      margin: 0 auto;
-      display: block;
+  }
+  .img_process {
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    @include sp {
+      margin: 0 40px;
+    }
+    img {
+      max-width: 100%;
     }
   }
   .slick_area {
     margin-bottom: 110px;
+    @include sp {
+      margin-bottom: 60px;
+    }
     img {
-      margin: 0 auto
+      margin: 0 auto;
+      @include sp {
+        width: 100%;
+      }
     }
     /*width: 875px;
     margin-left: auto;
@@ -785,6 +1080,9 @@ footer {
     h3 {
       &.h_line  {
         background: #e50012;
+        @include sp {
+          font-size: 0.929rem;
+        }
       }
     }
     h4 {
@@ -793,12 +1091,18 @@ footer {
     }
     img.img_h {
       margin-bottom: 40px;
+      @include sp {
+        height: 65px;
+      }
     }
     .line_area {
       padding: 30px 0;
       p {
         font-size: 1.25rem;
         line-height: 1.8;
+        @include sp {
+          font-size: 1rem;
+        }
         &.small {
           font-size: 0.75rem;
         }
@@ -808,23 +1112,36 @@ footer {
 }
 .line_double {
   margin: 60px 0 40px;
-  &.line_01 {
-    .right {
-      span {
-        margin: 35px 0;
-      }
-    }
-  }
   color: #e50012;
   overflow: hidden;
   border-top: 2px solid;
   border-bottom: 2px solid;
   height: 95px;
+  @include sp {
+    overflow: visible;
+    height: auto;
+    margin: 40px 0 40px;
+  }
+  &.line_01 {
+    .right {
+      span {
+        margin: 35px 0;
+        @include sp {
+          margin: 15px 0;
+        }
+      }
+    }
+  }
   .left {
     float: left;
     width: 46%;
     overflow: hidden;
     position: relative;
+    @include sp {
+      width: 100%;
+      float: none;
+      border-bottom: 2px dotted;
+    }
     span {
       float: left;
       &:first-child{
@@ -839,12 +1156,26 @@ footer {
         right: 0;
         border-right: 2px dotted;
         padding-right: 30px;
+        @include sp {
+          padding-right: 0;
+          font-size: 0.929rem;
+          border-right: none;
+        }
+      }
+    }
+    img {
+      @include sp {
+        width: 150px;
       }
     }
   }
   .right {
     float: right;
     width: 53%;
+    @include sp {
+      float: none;
+      width: 100%;
+    }
     span {
       font-size: 0.9375rem;
       text-align: left;
@@ -854,6 +1185,10 @@ footer {
       line-height: 1.6;
       letter-spacing: 0.05em;
       padding-left: 40px;
+      @include sp {
+        padding-left: 0;
+        margin: 15px 0;
+      }
     }
   }
   span {
@@ -868,10 +1203,17 @@ footer {
         font-weight: bold;
         margin: 20px 0;
         line-height: 1.318;
+        @include sp {
+          font-size: 1.572rem;
+          margin: 20px 0 30px;
+        }
         &.small {
           font-weight: normal;
           font-size: 0.875rem;
           letter-spacing: 0.05em;
+          @include sp {
+            font-size: 1rem;
+          }
         }
         span {
           font-size: 0.8125rem;
@@ -881,6 +1223,9 @@ footer {
           margin-top: 10px;
           padding-top: 10px;
           display: block;
+          @include sp {
+            font-size: 0.929rem;
+          }
         }
       }
       .yellow +p .line_dot  {
@@ -937,6 +1282,20 @@ footer {
       margin-left: 30px;
       position: relative;
       margin-bottom: 30px;
+      @include sp {
+        width: 100%;
+        margin-left: 0;
+      }
+      .img {
+        @include sp {
+          margin: 0 25px;
+        }
+        img {
+          @include sp {
+            width: 100%;
+          }
+        }
+      }
       &:nth-child(odd) {
         margin-left: 0;
       }
@@ -950,6 +1309,10 @@ footer {
         border-left: solid 50px transparent;
         top: -4px;
         z-index: 2;
+        @include sp {
+          border-top: solid 30px #fff;
+          border-left: solid 30px transparent;
+        }
       }
       &:after {
         height: 0;
@@ -960,11 +1323,18 @@ footer {
         border-top: solid 50px #000;
         border-left: solid 50px transparent;
         top: -2px;
+        @include sp {
+          border-top: solid 30px #000;
+          border-left: solid 30px transparent;
+        }
       }
       &:last-child,
       &:nth-last-child(2)
        {
         margin-bottom: 0;
+        @include sp {
+          margin-bottom: 30px;
+        }
       }
       .left {
         float: left;
@@ -972,18 +1342,31 @@ footer {
       .right {
         float: right;
         width: 150px;
+        @include sp {
+          width: 95px;
+        }
       }
       .ttl {
         margin: 30px 45px 35px 45px;
         overflow: hidden;
         color: #fff;
         border-bottom: 2px dotted #000;
+        @include sp {
+          margin: 20px 25px;
+        }
         .right {
           font-size: 1.25rem;
           font-weight: bold;
           margin-bottom: 15px;
+          @include sp {
+            font-size: 1rem;
+            margin-bottom: 10px;
+          }
           img {
             margin-right: 10px;
+            @include sp {
+              margin-right: 7px;
+            }
           }
         }
         .left {
@@ -991,6 +1374,9 @@ footer {
           line-height: 1.5;
           font-weight: bold;
           margin: 5px 0;
+          @include sp {
+            font-size: 1rem;
+          }
         }
         a {
           color: #fff;
@@ -1000,9 +1386,15 @@ footer {
         margin: 35px 45px 55px;
         line-height: 1.8125;
         letter-spacing: 0.04em;
+        @include sp {
+          margin: 20px 25px;
+        }
         p {
           color: #000;
           text-align: left;
+          @include sp {
+            font-size: 0.929rem;
+          }
         }
       }
       &:before {
@@ -1020,6 +1412,9 @@ footer {
         }
         &:after {
           border-top: solid 50px $color_y;
+          @include sp {
+            border-top: solid 30px $color_y;
+          }
         }
       }
       &.red {
@@ -1035,6 +1430,10 @@ footer {
         }
         &:after {
           border-top: solid 50px #e50012;
+          @include sp {
+            border-top: solid 30px #e50012;
+          }
+
         }
       }
       &.green {
@@ -1049,6 +1448,9 @@ footer {
         }
         &:after {
           border-top: solid 50px $color_g;
+          @include sp {
+            border-top: solid 30px $color_g;
+          }
         }
       }
       &.pink {
@@ -1063,6 +1465,9 @@ footer {
         }
         &:after {
           border-top: solid 50px $color_p;
+          @include sp {
+            border-top: solid 30px $color_p;
+          }
         }
       }
 
@@ -1140,7 +1545,10 @@ footer {
 }
 .other {
   .inner  {
-  padding: 80px 80px;
+    padding: 80px 80px;
+    @include sp {
+    padding: 50px 40px 0;
+    }
   }
   h3 {
     padding: 20px 0px 0;
@@ -1148,20 +1556,43 @@ footer {
   h4 {
     line-height: 1.95;
     padding-top: 40px;
+    @include sp {
+      padding-top: 25px;
+    }
   }
   .h_txt {
     margin-bottom: 80px;
+    @include sp {
+      text-align: left;
+    }
   }
 }
 .faq {
   .corner_area {
+    @include sp {
+      margin-top: 0;
+    }
     .ttl {
       position: relative;
+      @include sp {
+        margin: 10px 25px !important;
+      }
       .left {
         width: 58px;
+        @include sp {
+          width: 28px;
+        }
+        img {
+          @include sp {
+            width: 28px;
+          }
+        }
       }
       .right {
         width: 85%;
+        @include sp {
+          margin: 15px 0px;
+        }
         span {
           display: block;
           text-align: left;
@@ -1175,6 +1606,14 @@ footer {
           text-align: left;*/
           width: 85%;
           line-height: 1.4;
+          @include sp {
+            position: relative;
+            top: auto;
+            left: auto;
+            transform: none;
+            -webkit-transform: none;
+            -ms-transform: none;
+          }
         }
       }
     }
@@ -1183,6 +1622,15 @@ footer {
       .left {
         width: 20%;
         width: 58px;
+        @include sp {
+          width: 28px;
+        }
+        img {
+          @include sp {
+            width: 18px;
+            margin: 0 auto;
+          }
+        }
       }
       .right {
         width: 80%;
@@ -1246,6 +1694,9 @@ footer {
     .inner_map {
       overflow: hidden;
       padding: 40px 50px;
+      @include sp {
+        padding: 20px 15px;
+      }
       p {
         text-align: left;
         line-height: 1.8125;
@@ -1257,6 +1708,9 @@ footer {
             font-size: 1.75rem;
             font-weight: bold;
             line-height: 1.607;
+            @include sp {
+              display: block;
+            }
           }
         }
       }
@@ -1264,6 +1718,15 @@ footer {
         text-align: left;
         width: calc(50% - 55px);
         margin-left: 55px;
+        @include sp {
+          margin-left: 0;
+          width: 100%;
+        }
+      }
+      img {
+      @include sp {
+        max-width: 100%;
+      }
       }
     }
   }

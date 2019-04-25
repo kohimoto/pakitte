@@ -5,11 +5,11 @@ $(function(){
     arrows: false,
     dots: false,
     autoplay: true,
-    responsive: [ //レスポンシブの設定
+    responsive: [
     {
-      breakpoint: 480, //ブレークポイント1の値
-      settings: { //480px以下では1画像表示
-      slidesToShow: 1
+      breakpoint: 480,
+      settings: {
+//      slidesToShow: 1
       }
     }]
   });
@@ -31,7 +31,6 @@ $(function(){
       moveLogo(setImg);
       counter++;
     } else {
-    // 特定の要素を超えていない
     }
 
     });
@@ -56,12 +55,10 @@ if($('#motion').length){
 //------ drop motion ------//
 $('.havemenu').hover(
     function() {
-        //マウスカーソルが重なった時の処理
-        $('.inner_menu').slideDown();
+      $('.inner_menu').slideDown();
     },
     function() {
-        //マウスカーソルが離れた時の処理
-        $('.inner_menu').slideUp();
+      $('.inner_menu').slideUp();
     }
 );
 
@@ -94,6 +91,14 @@ $('.havemenu').hover(
       $(this).attr('alt','off');
 
     }
+  });
+
+//------ modal switch ------//
+  var w = $(window).width();
+  modalSwitch(w);
+  $(window).resize(function(){
+    var w = $(window).width();
+      modalSwitch(w);
   });
 
 });
@@ -129,6 +134,7 @@ function playVideo(v) {
 	v.play();
 }
 
+//----- movie Logo -------//
 function moveLogo (setImg) {
   //var setImg = '#viewer';
   var fadeSpeed = 500;
@@ -147,6 +153,23 @@ function moveLogo (setImg) {
     }
   cnt ++;
   },switchDelay);
+}
+
+//----- modal switch -------//
+function modalSwitch(w) {
+  var x = 800;
+  if (w <= x) {
+  // 800px以下のときの処理
+   $('.modal').each(function(index){
+     var href = $(this).attr("href");
+     var result = href.replace('.png','_sp.png');
+     var newHref = result;
+     $(this).attr('href' , newHref);
+   });
+
+
+  } else {
+  }
 }
 
 //----- //FUNCTION--------//
