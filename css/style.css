@@ -71,8 +71,7 @@ h2 {
     margin: 0 auto; }
     @media (max-width: 800px) {
       h2 img {
-        max-width: 100%;
-        height: 25px; } }
+        max-width: 100%; } }
 
 h3 {
   font-size: 1.625rem;
@@ -241,7 +240,8 @@ h4 {
 
 .btn_area .btn {
   border: 4px solid #e50012;
-  width: 732px;
+  max-width: 732px;
+  width: 100%;
   margin: 0 auto;
   padding: 18px 0; }
   @media (max-width: 800px) {
@@ -512,7 +512,11 @@ footer {
       .message h2 img {
         width: 280px; } }
   .message .left {
-    float: left; }
+    float: left;
+    width: calc(100% - 332px); }
+    @media (max-width: 800px) {
+      .message .left {
+        width: 100%; } }
     @media (max-width: 800px) {
       .message .left p {
         letter-spacing: 0.0em;
@@ -575,12 +579,15 @@ footer {
       .box:last-child {
         margin-bottom: 30px; } }
   .box .inner_img {
-    float: left; }
+    float: left;
+    width: calc(100% - 420px); }
     @media (max-width: 800px) {
       .box .inner_img {
+        width: 100%;
         float: none; } }
     .box .inner_img img {
-      display: block; }
+      display: block;
+      width: 100%; }
       @media (max-width: 800px) {
         .box .inner_img img {
           width: 100%; } }
@@ -639,9 +646,11 @@ footer {
         margin-left: 40px;
         margin-right: 40px; } }
     .frame.border_p .inner_right {
-      margin-left: 54px; }
+      margin-left: 54px;
+      width: calc(100% - 429px); }
       @media (max-width: 800px) {
         .frame.border_p .inner_right {
+          width: 100%;
           margin-left: 0; } }
       @media (max-width: 800px) {
         .frame.border_p .inner_right img {
@@ -656,7 +665,8 @@ footer {
 .box_half {
   overflow: hidden;
   /*padding: 0 75px 50px;*/
-  width: 875px;
+  max-width: 875px;
+  width: 100%;
   margin: 0 auto; }
   @media (max-width: 800px) {
     .box_half {
@@ -664,9 +674,9 @@ footer {
       max-width: 100%;
       padding-bottom: 20px; } }
   .box_half dl {
-    width: 380px;
+    width: 43%;
     float: left;
-    margin-left: 115px; }
+    margin-left: 14%; }
     @media (max-width: 800px) {
       .box_half dl {
         width: auto;
@@ -725,6 +735,8 @@ footer {
   .box03 div.inner_box {
     width: 33.333%;
     float: left; }
+    .box03 div.inner_box img {
+      width: auto; }
     @media (max-width: 800px) {
       .box03 div.inner_box {
         width: 100%;
@@ -782,9 +794,11 @@ footer {
         width: calc(50% - 20px);
         height: 220px;
         margin-left: 40px; } }
-  @media (max-width: 800px) and (max-width: 800px) {
     .product #motion .wrap_motion div img {
-      width: 100%; } }
+      width: 100%; }
+      @media (max-width: 800px) {
+        .product #motion .wrap_motion div img {
+          width: 100%; } }
     .product #motion .wrap_motion div:first-child {
       margin-left: 0px; }
     @media (max-width: 800px) {
@@ -1049,7 +1063,8 @@ footer {
 
 .box_type .inner_box .inner_img {
   border-radius: 100%;
-  width: 220px;
+  width: 100%;
+  max-width: 220px;
   height: 220px;
   margin: 0 auto;
   position: relative; }
@@ -1166,6 +1181,10 @@ footer {
               font-size: 1rem; } }
         .corner_area .inner_corner .corner_box .ttl a {
           color: #fff; }
+      .corner_area .inner_corner .corner_box .img {
+        margin: 30px 45px 30px; }
+        .corner_area .inner_corner .corner_box .img img {
+          width: 100%; }
       .corner_area .inner_corner .corner_box .txt {
         margin: 30px 45px 40px;
         letter-spacing: 0.04em;

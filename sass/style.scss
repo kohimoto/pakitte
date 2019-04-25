@@ -96,7 +96,6 @@ h2 {
   margin: 0 auto;
     @include sp {
       max-width: 100%;
-      height: 25px;
     }
   }
 }
@@ -279,7 +278,8 @@ h4 {
 .btn_area {
   .btn {
     border: 4px solid #e50012;
-    width: 732px;
+    max-width: 732px;
+    width: 100%;
     margin: 0 auto;
     padding: 18px 0;
     @include sp {
@@ -586,6 +586,10 @@ footer {
   }
   .left {
     float: left;
+    width: calc(100% - 332px);
+    @include sp {
+      width: 100%;
+    }
     p {
       @include sp {
         letter-spacing: 0.0em;
@@ -664,11 +668,14 @@ footer {
   }
   .inner_img {
     float: left;
+    width: calc(100% - 420px);
     @include sp {
+      width: 100%;
       float: none;
     }
     img {
       display: block;
+      width: 100%;
       @include sp {
         width: 100%;
       }
@@ -739,7 +746,9 @@ footer {
     }
     .inner_right {
       margin-left: 54px;
+      width: calc(100% - 429px);
       @include sp {
+        width: 100%;
         margin-left: 0;
       }
       img {
@@ -760,7 +769,8 @@ footer {
 .box_half {
   overflow: hidden;
   /*padding: 0 75px 50px;*/
-  width: 875px;
+  max-width: 875px;
+  width: 100%;
   margin: 0 auto;
   @include sp {
     width: auto;
@@ -768,9 +778,9 @@ footer {
     padding-bottom: 20px;
   }
   dl {
-    width: 380px;
+    width: 43%;
     float: left;
-    margin-left: 115px;
+    margin-left: 14%;
     @include sp {
       width: auto;
       float: none;
@@ -838,6 +848,9 @@ footer {
   div.inner_box {
       width: 33.333%;
       float: left;
+      img {
+        width: auto;
+      }
       @include sp {
         width: 100%;
         float: none;
@@ -919,10 +932,11 @@ footer {
           width: calc(50% - 20px);
           height: 220px;
           margin-left: 40px;
-          img {
-            @include sp {
-              width: 100%;
-            }
+        }
+        img {
+          width: 100%;
+          @include sp {
+            width: 100%;
           }
         }
         &:first-child {
@@ -1252,7 +1266,8 @@ footer {
     }
     .inner_img {
       border-radius:100%;
-      width: 220px;
+      width: 100%;
+      max-width: 220px;
       height: 220px;
       margin: 0 auto;
       position: relative;
@@ -1386,6 +1401,12 @@ footer {
         }
         a {
           color: #fff;
+        }
+      }
+      .img {
+        margin: 30px 45px 30px;
+        img{
+          width: 100%;
         }
       }
       .txt {
