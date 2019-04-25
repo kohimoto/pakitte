@@ -1821,20 +1821,34 @@ footer {
       text-align: center;
       font-weight: bold;
       padding: 10px 0;
+      @include sp {
+        width: 25%;
+        font-size: 0.9285rem;
+      }
     }
     dd {
       width: 85%;
       text-align: left;
       border-bottom: 1px solid #036eb7;
+      @include sp {
+        width: 75%;
+      }
       p {
         margin: 10px 20px 10px 20px;
+        @include sp {
+          font-size: 0.9285rem;
+        }
         span {
           display: block;
-          border-top: dashed 1px #036eb7;
+          border-top: dashed 1px #1d2087;
           padding-top: 5px;
         }
         img {
           margin: 20px 60px 10px;
+          @include sp {
+            width: 100%;
+            margin-left: 0;
+          }
         }
       }
     }
@@ -1882,11 +1896,24 @@ footer {
         letter-spacing: 0.02em;
         border-color: #1d2087;
         font-size: 0.9375rem;
+        @include sp {
+          line-height: 2.3077;
+        }
         p {
           margin: 10px 0px 10px 0px;
+          @include sp {
+            border-bottom: dashed 1px #1d2087;
+            display: inline;
+            padding-bottom: 8px;
+          }
           span {
             border-color: #1d2087;
-
+            margin-right: 30px;
+            @include sp {
+              display: inline;
+              border-top: none;
+              margin-right: 0;
+            }
           }
         }
       }
@@ -1896,11 +1923,32 @@ footer {
 .list {
   margin-top: 20px;
   padding-bottom :20px;
+  @include sp {
+    padding-bottom: 0;
+  }
   div {
     position: relative;
-    height: 80px;
+    min-height: 80px;
+    height: auto;
     margin-bottom: 20px;
     background: rgba(84, 195, 241, 0.2);
+    overflow: hidden;
+    display:-webkit-box;
+    display:-moz-box;
+    display:-ms-box;
+    display:-webkit-flexbox;
+    display:-moz-flexbox;
+    display:-ms-flexbox;
+    display:-webkit-flex;
+    display:-moz-flex;
+    display:-ms-flex;
+    display:flex;
+    -webkit-box-lines:multiple;
+    -moz-box-lines:multiple;
+    -webkit-flex-wrap:wrap;
+    -moz-flex-wrap:wrap;
+    -ms-flex-wrap:wrap;
+    flex-wrap:wrap;
     &.dark {
       background: rgba(21, 103, 168,0.2);
       .num {
@@ -1913,14 +1961,14 @@ footer {
   }
   .num {
   width: 80px;
-  height: 80px;
+  min-height: 80px;
   background: #54c3f1;
   display: block;
   float: left;
   position: relative;
     @include sp {
       width: 30px;
-      height: 80px;
+      min-height: 80px;
     }
     &+p {
       /*position: absolute;
@@ -1936,9 +1984,15 @@ footer {
       font-size: 0.9375rem;
       position: relative;
       float: right;
+      @include sp {
+        width: calc(100% - 30px);
+      }
       span {
         margin: 23px 0px 23px 20px;
         display: block;
+        @include sp {
+          margin: 10px 20px 10px 20px;
+        }
       }
     }
     img {
@@ -1996,6 +2050,9 @@ footer {
 .company {
   .info_area {
     margin-top: 60px;
+    @include sp {
+      margin-top: 0;
+    }
     .tbl {
       margin-bottom: 0;
     }
@@ -2099,7 +2156,9 @@ footer {
 .topmessage {
   .inner {
     padding: 80px 0px;
-
+    @include sp {
+      padding: 50px 0px 0;
+    }
   }
   max-width: 860px;
   margin: 0 auto;
@@ -2111,16 +2170,28 @@ footer {
     padding: 120px 50px 70px 100px;
     line-height: 2.25;
     letter-spacing: 0.05em;
+    @include sp {
+      background: none;
+      margin-top: 35px;
+      padding: 0 40px;
+    }
     .p_head {
       font-size: 1.1875rem;
       line-height: 1.895;
       letter-spacing: 0.08em;
       font-weight: bold;
+      @include sp {
+        text-align: center;
+        font-weight: normal;
+      }
     }
     .sign {
       text-align: right;
       padding-right: 40px;
       line-height: 2.26;
+      @include sp {
+        padding-right: 0;
+      }
     }
     .spacer {
       height: 30px;
@@ -2130,6 +2201,9 @@ footer {
       position: absolute;
       bottom: 40px;
       left: -200px;
+      @include sp {
+        content: "";
+      }
     }
   }
 }
