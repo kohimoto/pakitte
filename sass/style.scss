@@ -127,16 +127,10 @@ h3 {
   }
 }
 h4 {
-  /*font-size: 25px;*/
-  /*font-size: 1.4375rem;*/
   font-size: 1.4375rem;
   line-height: 1.6;
   font-weight: normal;
-  padding-bottom: 35px;
-  /*letter-spacing: 0.05em;*/
-  @include sp {
-    font-size: 1.143rem;
-  }
+  padding-bottom: 30px;
 }
 .wrap {
   margin-bottom: 50px;
@@ -287,7 +281,7 @@ h4 {
     border: 4px solid #e50012;
     width: 732px;
     margin: 0 auto;
-    padding: 30px 0;
+    padding: 18px 0;
     @include sp {
       max-width: 100%;
       width: auto;
@@ -303,7 +297,7 @@ h4 {
   }
 }
 .rs {
-  letter-spacing: -6px;
+  letter-spacing: -3px;
 }
 .ls0 {
   letter-spacing: 0px;
@@ -393,7 +387,7 @@ header {
   }
   .logo {
     float: left;
-    margin: 23px 0 21px;
+    margin: 25px 0 16px;
     @include sp {
       float: none;
       height: 27.27px;
@@ -430,7 +424,7 @@ header {
   }
   .menu01 {
     float: left;
-    margin: 30px 0px 30px 50px;
+    margin: 27px 0px 23px 50px;
     overflow: hidden;
     padding-left: 0;
       @include sp {
@@ -466,7 +460,7 @@ header {
     li {
       margin-left: 10px;
       border: 1px solid #b5b5b6;
-      padding: 8px 0px;
+      padding: 5px 0px 3px;
       width: 145px;
       text-align: center;
       @include sp {
@@ -499,7 +493,7 @@ header {
     .inner_menu {
       position: absolute;
       left: 0;
-      top: 42px;
+      top: 34px;
       z-index: 100;
       display: none;
       @include sp {
@@ -514,6 +508,10 @@ header {
         display: block;
         background: #fff;
         font-weight: normal;
+        border-bottom: 0;
+        &:last-child{
+          border-bottom: 1px solid #b5b5b6;
+        }
         @include sp {
           padding-left: 10px;
           border-bottom: none;
@@ -542,7 +540,7 @@ footer {
     margin: 0 40px;
   }
   .container {
-    margin: 0 auto 90px;
+    margin: 0 auto 70px;
     position: relative;
     @include sp {
       margin-bottom: 20px;
@@ -785,9 +783,11 @@ footer {
       /*border-bottom: 3px solid #e50012;*/
       line-height: 1;
       margin-bottom: 20px;
+      font-size: 1.375em;
       @include sp {
         font-size: 1.143rem;
       }
+
     }
     dd {
       line-height: 1.714;
@@ -907,12 +907,12 @@ footer {
   #motion {
     .wrap_motion {
       position: relative;
-      height: 500px;
+      height: 400px;
       div {
         position: relative;
         width: 25%;
         float: left;
-        height: 500px;
+        height: 400px;
         margin-left: 80px;
         width: calc(25% - 60px);
         @include sp {
@@ -1078,6 +1078,7 @@ footer {
 .lineup {
   .inner {
     h3 {
+      padding: 20px 0 40px;
       &.h_line  {
         background: #e50012;
         @include sp {
@@ -1087,7 +1088,7 @@ footer {
     }
     h4 {
       letter-spacing: 0.08em;
-      padding-bottom: 20px;
+      padding-bottom: 10px;
     }
     img.img_h {
       margin-bottom: 40px;
@@ -1203,10 +1204,12 @@ footer {
         font-weight: bold;
         margin: 20px 0;
         line-height: 1.318;
+        font-size: 1.375rem;
         @include sp {
           font-size: 1.572rem;
           margin: 20px 0 30px;
         }
+
         &.small {
           font-weight: normal;
           font-size: 0.875rem;
@@ -1223,9 +1226,11 @@ footer {
           margin-top: 10px;
           padding-top: 10px;
           display: block;
+          letter-spacing: 0;
           @include sp {
             font-size: 0.929rem;
           }
+
         }
       }
       .yellow +p .line_dot  {
@@ -1358,12 +1363,13 @@ footer {
           font-size: 1.25rem;
           font-weight: bold;
           margin-bottom: 15px;
+          line-height: 2;
           @include sp {
             font-size: 1rem;
             margin-bottom: 10px;
           }
           img {
-            margin-right: 10px;
+            margin-right: 8px;
             @include sp {
               margin-right: 7px;
             }
@@ -1383,12 +1389,13 @@ footer {
         }
       }
       .txt {
-        margin: 35px 45px 55px;
-        line-height: 1.8125;
+        margin: 30px 45px 40px;
         letter-spacing: 0.04em;
+        line-height: 1.625;
         @include sp {
           margin: 20px 25px;
         }
+
         p {
           color: #000;
           text-align: left;
@@ -1551,7 +1558,7 @@ footer {
     }
   }
   h3 {
-    padding: 20px 0px 0;
+    padding: 0;
   }
   h4 {
     line-height: 1.95;
@@ -1597,13 +1604,7 @@ footer {
           display: block;
           text-align: left;
           margin-left: 11%;
-/*:          position: absolute;
-          top: 50%;
-          left: 0%;
-          -ms-transform: translate(0%,50%);
-          -webkit-transform: translate(0%,50%);
-          transform: translate(0%,50%);
-          text-align: left;*/
+          letter-spacing: 0;
           width: 85%;
           line-height: 1.4;
           @include sp {
@@ -1633,7 +1634,8 @@ footer {
         }
       }
       .right {
-        width: 80%;
+        width: calc(100% - 74px);
+        font-size: 1rem;
       }
 
     }
@@ -1671,6 +1673,7 @@ footer {
 .history {
   .h_line {
     background: #54c3f1;
+    margin: 70px 0 50px;
   }
   .box {
     padding: 0 60px;
@@ -1699,7 +1702,7 @@ footer {
       }
       p {
         text-align: left;
-        line-height: 1.8125;
+        line-height: 1.75;
         &.ttl {
           padding-bottom: 40px;
           font-size: 1.0625rem;
@@ -1708,16 +1711,20 @@ footer {
             font-size: 1.75rem;
             font-weight: bold;
             line-height: 1.607;
+            color: #231815;
+            vertical-align: middle;
+            padding-bottom: 5px;
             @include sp {
               display: block;
             }
+
           }
         }
       }
       .right {
         text-align: left;
-        width: calc(50% - 55px);
-        margin-left: 55px;
+        width: calc(50% - 50px);
+        margin-left: 50px;
         @include sp {
           margin-left: 0;
           width: 100%;
@@ -1738,7 +1745,7 @@ footer {
   font-size: 1.75rem;
   line-height: 1.607;
   font-weight: bold;
-  background: url("../images/company/box01.png") ;
+  background: url("../images/company/box01.gif") ;
   color: #036eb7;
   border-color: #036eb7;
   letter-spacing: 0.15em;
@@ -1746,7 +1753,7 @@ footer {
   &.skyblue {
     color: #54c3f1;
     border-color: #54c3f1;
-    background: url("../images/company/box02.png") ;
+    background: url("../images/company/box02.gif") ;
   }
 }
 .txt {
@@ -1921,6 +1928,8 @@ footer {
       color: #fff;
       font-size: 0.9375rem;
       line-height: 1.8;
+      font-weight: bold;
+      letter-spacing: 0.05em;
       &:first-child {
         margin-left: 0;
       }
@@ -1977,16 +1986,16 @@ footer {
     content: url("../images/company/line01.png");
     display: block;
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: -10px;
+    top: -10px;
     z-index: 2;
   }
   &:after {
     content: url("../images/company/line02.png");
     display: block;
     position: absolute;
-    bottom: -30px;
-    left: -20px;
+    bottom: -23px;
+    left: -10px;
   }
 }
 .space_block {
@@ -1994,7 +2003,7 @@ footer {
     &.color {
       font-size: 1.5625rem;
       color: #1D2087;
-      padding-bottom: 20px;
+      padding-bottom: 0px;
       font-weight: bold;
     }
     &.no_top {
@@ -2006,7 +2015,7 @@ footer {
   width: 10px;
   height: 10px;
   background: #54C3F1;
-  margin: 40px auto 30px;
+  margin: 50px auto 50px;
 }
 .csr {
   h4 {
@@ -2029,13 +2038,14 @@ footer {
     margin-top: 80px;
     text-align: left;
     background: url("../images/company/bg_message.png") no-repeat;
-    padding: 130px 50px 130px 100px;
+    padding: 120px 50px 70px 100px;
     line-height: 2.25;
     letter-spacing: 0.05em;
     .p_head {
       font-size: 1.1875rem;
       line-height: 1.895;
       letter-spacing: 0.08em;
+      font-weight: bold;
     }
     .sign {
       text-align: right;
@@ -2048,8 +2058,8 @@ footer {
     &:after {
       content: url("../images/company/pac_message.png");
       position: absolute;
-      bottom: 50px;
-      left: -250px;
+      bottom: 40px;
+      left: -200px;
     }
   }
 }
@@ -2089,8 +2099,8 @@ footer {
       line-height: 1.5625rem;
       background: rgb(84, 195, 241);
       color: #fff;
-      font-size: 0.9375rem;
       padding: 17px 0;
+      font-weight: bold;
       span {
         font-size: 1.25rem;
       }
@@ -2128,6 +2138,7 @@ footer {
     font-weight: normal;
     color: #1567A8;
     border-bottom: 1px dashed #1567A8;
+    line-height: 3;
   }
   .box {
     margin-bottom: 20px;
@@ -2144,6 +2155,10 @@ footer {
   }
 }
 .privacy {
+  h2{
+    font-size: 1.625rem;
+    color: #1D2087;
+  }
   h3 {
     font-size: 1.25rem;
     color: #1D2087;

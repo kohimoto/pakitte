@@ -98,16 +98,10 @@ h3 {
           top: -20px; } }
 
 h4 {
-  /*font-size: 25px;*/
-  /*font-size: 1.4375rem;*/
   font-size: 1.4375rem;
   line-height: 1.6;
   font-weight: normal;
-  padding-bottom: 35px;
-  /*letter-spacing: 0.05em;*/ }
-  @media (max-width: 800px) {
-    h4 {
-      font-size: 1.143rem; } }
+  padding-bottom: 30px; }
 
 .wrap {
   margin-bottom: 50px; }
@@ -249,7 +243,7 @@ h4 {
   border: 4px solid #e50012;
   width: 732px;
   margin: 0 auto;
-  padding: 30px 0; }
+  padding: 18px 0; }
   @media (max-width: 800px) {
     .btn_area .btn {
       max-width: 100%;
@@ -263,7 +257,7 @@ h4 {
         font-size: 1rem; } }
 
 .rs {
-  letter-spacing: -6px; }
+  letter-spacing: -3px; }
 
 .ls0 {
   letter-spacing: 0px; }
@@ -349,7 +343,7 @@ header .container ul li {
 
 header .logo {
   float: left;
-  margin: 23px 0 21px; }
+  margin: 25px 0 16px; }
   @media (max-width: 800px) {
     header .logo {
       float: none;
@@ -382,7 +376,7 @@ header .sp_menu {
 
 header .menu01 {
   float: left;
-  margin: 30px 0px 30px 50px;
+  margin: 27px 0px 23px 50px;
   overflow: hidden;
   padding-left: 0; }
   @media (max-width: 800px) {
@@ -413,7 +407,7 @@ header .menu02 {
   header .menu02 li {
     margin-left: 10px;
     border: 1px solid #b5b5b6;
-    padding: 8px 0px;
+    padding: 5px 0px 3px;
     width: 145px;
     text-align: center; }
     @media (max-width: 800px) {
@@ -439,7 +433,7 @@ header .menu02 {
   header .menu02 .inner_menu {
     position: absolute;
     left: 0;
-    top: 42px;
+    top: 34px;
     z-index: 100;
     display: none; }
     @media (max-width: 800px) {
@@ -453,7 +447,10 @@ header .menu02 {
       margin-left: 0;
       display: block;
       background: #fff;
-      font-weight: normal; }
+      font-weight: normal;
+      border-bottom: 0; }
+      header .menu02 .inner_menu li:last-child {
+        border-bottom: 1px solid #b5b5b6; }
       @media (max-width: 800px) {
         header .menu02 .inner_menu li {
           padding-left: 10px;
@@ -477,7 +474,7 @@ footer {
     footer {
       margin: 0 40px; } }
   footer .container {
-    margin: 0 auto 90px;
+    margin: 0 auto 70px;
     position: relative; }
     @media (max-width: 800px) {
       footer .container {
@@ -680,7 +677,8 @@ footer {
     .box_half dl dt {
       /*border-bottom: 3px solid #e50012;*/
       line-height: 1;
-      margin-bottom: 20px; }
+      margin-bottom: 20px;
+      font-size: 1.375em; }
       @media (max-width: 800px) {
         .box_half dl dt {
           font-size: 1.143rem; } }
@@ -771,12 +769,12 @@ footer {
 
 .product #motion .wrap_motion {
   position: relative;
-  height: 500px; }
+  height: 400px; }
   .product #motion .wrap_motion div {
     position: relative;
     width: 25%;
     float: left;
-    height: 500px;
+    height: 400px;
     margin-left: 80px;
     width: calc(25% - 60px); }
     @media (max-width: 800px) {
@@ -905,15 +903,17 @@ footer {
       .development .slick_area img {
         width: 100%; } }
 
-.lineup .inner h3.h_line {
-  background: #e50012; }
-  @media (max-width: 800px) {
-    .lineup .inner h3.h_line {
-      font-size: 0.929rem; } }
+.lineup .inner h3 {
+  padding: 20px 0 40px; }
+  .lineup .inner h3.h_line {
+    background: #e50012; }
+    @media (max-width: 800px) {
+      .lineup .inner h3.h_line {
+        font-size: 0.929rem; } }
 
 .lineup .inner h4 {
   letter-spacing: 0.08em;
-  padding-bottom: 20px; }
+  padding-bottom: 10px; }
 
 .lineup .inner img.img_h {
   margin-bottom: 40px; }
@@ -1007,7 +1007,8 @@ footer {
 .box_type .inner_box .inner_ex p {
   font-weight: bold;
   margin: 20px 0;
-  line-height: 1.318; }
+  line-height: 1.318;
+  font-size: 1.375rem; }
   @media (max-width: 800px) {
     .box_type .inner_box .inner_ex p {
       font-size: 1.572rem;
@@ -1025,7 +1026,8 @@ footer {
     border-top: 2px dotted;
     margin-top: 10px;
     padding-top: 10px;
-    display: block; }
+    display: block;
+    letter-spacing: 0; }
     @media (max-width: 800px) {
       .box_type .inner_box .inner_ex p .line_dot {
         font-size: 0.929rem; } }
@@ -1143,13 +1145,14 @@ footer {
         .corner_area .inner_corner .corner_box .ttl .right {
           font-size: 1.25rem;
           font-weight: bold;
-          margin-bottom: 15px; }
+          margin-bottom: 15px;
+          line-height: 2; }
           @media (max-width: 800px) {
             .corner_area .inner_corner .corner_box .ttl .right {
               font-size: 1rem;
               margin-bottom: 10px; } }
           .corner_area .inner_corner .corner_box .ttl .right img {
-            margin-right: 10px; }
+            margin-right: 8px; }
             @media (max-width: 800px) {
               .corner_area .inner_corner .corner_box .ttl .right img {
                 margin-right: 7px; } }
@@ -1164,9 +1167,9 @@ footer {
         .corner_area .inner_corner .corner_box .ttl a {
           color: #fff; }
       .corner_area .inner_corner .corner_box .txt {
-        margin: 35px 45px 55px;
-        line-height: 1.8125;
-        letter-spacing: 0.04em; }
+        margin: 30px 45px 40px;
+        letter-spacing: 0.04em;
+        line-height: 1.625; }
         @media (max-width: 800px) {
           .corner_area .inner_corner .corner_box .txt {
             margin: 20px 25px; } }
@@ -1281,7 +1284,7 @@ footer {
       padding: 50px 40px 0; } }
 
 .other h3 {
-  padding: 20px 0px 0; }
+  padding: 0; }
 
 .other h4 {
   line-height: 1.95;
@@ -1322,13 +1325,7 @@ footer {
       display: block;
       text-align: left;
       margin-left: 11%;
-      /*:          position: absolute;
-          top: 50%;
-          left: 0%;
-          -ms-transform: translate(0%,50%);
-          -webkit-transform: translate(0%,50%);
-          transform: translate(0%,50%);
-          text-align: left;*/
+      letter-spacing: 0;
       width: 85%;
       line-height: 1.4; }
       @media (max-width: 800px) {
@@ -1353,7 +1350,8 @@ footer {
         width: 18px;
         margin: 0 auto; } }
   .faq .corner_area .txt .right {
-    width: 80%; }
+    width: calc(100% - 74px);
+    font-size: 1rem; }
 
 .faq .corner_area .red .ttl .right {
   color: #e50012; }
@@ -1368,7 +1366,8 @@ footer {
   color: #377238; }
 
 .history .h_line {
-  background: #54c3f1; }
+  background: #54c3f1;
+  margin: 70px 0 50px; }
 
 .history .box {
   padding: 0 60px;
@@ -1392,7 +1391,7 @@ footer {
         padding: 20px 15px; } }
     .map_area .map_box .inner_map p {
       text-align: left;
-      line-height: 1.8125; }
+      line-height: 1.75; }
       .map_area .map_box .inner_map p.ttl {
         padding-bottom: 40px;
         font-size: 1.0625rem;
@@ -1400,14 +1399,17 @@ footer {
         .map_area .map_box .inner_map p.ttl span {
           font-size: 1.75rem;
           font-weight: bold;
-          line-height: 1.607; }
+          line-height: 1.607;
+          color: #231815;
+          vertical-align: middle;
+          padding-bottom: 5px; }
           @media (max-width: 800px) {
             .map_area .map_box .inner_map p.ttl span {
               display: block; } }
     .map_area .map_box .inner_map .right {
       text-align: left;
-      width: calc(50% - 55px);
-      margin-left: 55px; }
+      width: calc(50% - 50px);
+      margin-left: 50px; }
       @media (max-width: 800px) {
         .map_area .map_box .inner_map .right {
           margin-left: 0;
@@ -1423,7 +1425,7 @@ footer {
   font-size: 1.75rem;
   line-height: 1.607;
   font-weight: bold;
-  background: url("../images/company/box01.png");
+  background: url("../images/company/box01.gif");
   color: #036eb7;
   border-color: #036eb7;
   letter-spacing: 0.15em;
@@ -1431,7 +1433,7 @@ footer {
   .blue_line.skyblue {
     color: #54c3f1;
     border-color: #54c3f1;
-    background: url("../images/company/box02.png"); }
+    background: url("../images/company/box02.gif"); }
 
 .txt {
   font-size: 1.0625rem;
@@ -1568,7 +1570,9 @@ footer {
       border-radius: 100%;
       color: #fff;
       font-size: 0.9375rem;
-      line-height: 1.8; }
+      line-height: 1.8;
+      font-weight: bold;
+      letter-spacing: 0.05em; }
       .circle_area ul li:first-child {
         margin-left: 0; }
       .circle_area ul li.skyblue {
@@ -1610,20 +1614,20 @@ footer {
     content: url("../images/company/line01.png");
     display: block;
     position: absolute;
-    right: -20px;
-    top: -20px;
+    right: -10px;
+    top: -10px;
     z-index: 2; }
   .strong_area:after {
     content: url("../images/company/line02.png");
     display: block;
     position: absolute;
-    bottom: -30px;
-    left: -20px; }
+    bottom: -23px;
+    left: -10px; }
 
 .space_block h4.color {
   font-size: 1.5625rem;
   color: #1D2087;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   font-weight: bold; }
 
 .space_block h4.no_top {
@@ -1633,7 +1637,7 @@ footer {
   width: 10px;
   height: 10px;
   background: #54C3F1;
-  margin: 40px auto 30px; }
+  margin: 50px auto 50px; }
 
 .csr h4 {
   padding-top: 0; }
@@ -1652,13 +1656,14 @@ footer {
     margin-top: 80px;
     text-align: left;
     background: url("../images/company/bg_message.png") no-repeat;
-    padding: 130px 50px 130px 100px;
+    padding: 120px 50px 70px 100px;
     line-height: 2.25;
     letter-spacing: 0.05em; }
     .topmessage .message_area .p_head {
       font-size: 1.1875rem;
       line-height: 1.895;
-      letter-spacing: 0.08em; }
+      letter-spacing: 0.08em;
+      font-weight: bold; }
     .topmessage .message_area .sign {
       text-align: right;
       padding-right: 40px;
@@ -1668,8 +1673,8 @@ footer {
     .topmessage .message_area:after {
       content: url("../images/company/pac_message.png");
       position: absolute;
-      bottom: 50px;
-      left: -250px; }
+      bottom: 40px;
+      left: -200px; }
 
 .efforts_area {
   overflow: hidden;
@@ -1705,8 +1710,8 @@ footer {
       line-height: 1.5625rem;
       background: #54c3f1;
       color: #fff;
-      font-size: 0.9375rem;
-      padding: 17px 0; }
+      padding: 17px 0;
+      font-weight: bold; }
       .efforts_area ul .inner_left span {
         font-size: 1.25rem; }
     .efforts_area ul .inner_right {
@@ -1733,7 +1738,8 @@ footer {
     text-align: left;
     font-weight: normal;
     color: #1567A8;
-    border-bottom: 1px dashed #1567A8; }
+    border-bottom: 1px dashed #1567A8;
+    line-height: 3; }
   .efforts02 .box {
     margin-bottom: 20px; }
     .efforts02 .box .inner_right {
@@ -1743,6 +1749,10 @@ footer {
       width: 72%; }
       .efforts02 .box .inner_txt p {
         padding: 20px 0; }
+
+.privacy h2 {
+  font-size: 1.625rem;
+  color: #1D2087; }
 
 .privacy h3 {
   font-size: 1.25rem;
