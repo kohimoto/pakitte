@@ -1565,6 +1565,7 @@ footer {
     padding-top: 40px;
     @include sp {
       padding-top: 25px;
+      font-size: 1.143rem;
     }
   }
   .h_txt {
@@ -1911,28 +1912,48 @@ footer {
     }
   }
   .num {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    background: #54c3f1;
-    display: block;
+  width: 80px;
+  height: 80px;
+  background: #54c3f1;
+  display: block;
+  float: left;
+  position: relative;
+    @include sp {
+      width: 30px;
+      height: 80px;
+    }
     &+p {
-      position: absolute;
+      /*position: absolute;
       top: 50%;
       left: 50%;
       -ms-transform: translate(-45%,-50%);
       -webkit-transform: translate(-45%,-50%);
       transform: translate(-45%,-50%);
-      width: 90%;
+      width: 90%;*/
+      width: calc(100% - 80px);
       text-align: left;
       letter-spacing: 0.04em;
       font-size: 0.9375rem;
+      position: relative;
+      float: right;
+      span {
+        margin: 23px 0px 23px 20px;
+        display: block;
+      }
+    }
+    img {
+      @include sp {
+        height: 20px;
+      }
     }
   }
 }
 .txt_20 {
   font-size: 1.25rem;
   line-height: 1.9;
+  @include sp {
+    font-size: 1rem;
+  }
 }
 .circle_area {
   margin-top: 30px;
@@ -1951,8 +1972,16 @@ footer {
       line-height: 1.8;
       font-weight: bold;
       letter-spacing: 0.05em;
+      @include sp {
+        float: none;
+        margin-left: 0;
+        margin: 0 auto 20px;
+      }
       &:first-child {
         margin-left: 0;
+        @include sp {
+          margin: 0 auto 20px;
+        }
       }
       &.skyblue {
         background: #54C3F1;
@@ -1991,6 +2020,10 @@ footer {
       margin-left: 40px;
       height: 152px;
       position: relative;
+      @include sp {
+        width: 100%;
+        margin: 25px 24px;
+      }
       &:last-child {
         margin-right: 40px;
       }
@@ -1999,7 +2032,14 @@ footer {
         line-height: 1.8;
         letter-spacing: 0.05em;
         width: 100%;
-
+        @include sp {
+          text-align: left;
+          br {
+            @include sp {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

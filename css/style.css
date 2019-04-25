@@ -1291,7 +1291,8 @@ footer {
   padding-top: 40px; }
   @media (max-width: 800px) {
     .other h4 {
-      padding-top: 25px; } }
+      padding-top: 25px;
+      font-size: 1.143rem; } }
 
 .other .h_txt {
   margin-bottom: 80px; }
@@ -1548,26 +1549,43 @@ footer {
     .list div:last-child {
       margin-bottom: 0; }
   .list .num {
-    position: absolute;
     width: 80px;
     height: 80px;
     background: #54c3f1;
-    display: block; }
+    display: block;
+    float: left;
+    position: relative; }
+    @media (max-width: 800px) {
+      .list .num {
+        width: 30px;
+        height: 80px; } }
     .list .num + p {
-      position: absolute;
+      /*position: absolute;
       top: 50%;
       left: 50%;
-      -ms-transform: translate(-45%, -50%);
-      -webkit-transform: translate(-45%, -50%);
-      transform: translate(-45%, -50%);
-      width: 90%;
+      -ms-transform: translate(-45%,-50%);
+      -webkit-transform: translate(-45%,-50%);
+      transform: translate(-45%,-50%);
+      width: 90%;*/
+      width: calc(100% - 80px);
       text-align: left;
       letter-spacing: 0.04em;
-      font-size: 0.9375rem; }
+      font-size: 0.9375rem;
+      position: relative;
+      float: right; }
+      .list .num + p span {
+        margin: 23px 0px 23px 20px;
+        display: block; }
+    @media (max-width: 800px) {
+      .list .num img {
+        height: 20px; } }
 
 .txt_20 {
   font-size: 1.25rem;
   line-height: 1.9; }
+  @media (max-width: 800px) {
+    .txt_20 {
+      font-size: 1rem; } }
 
 .circle_area {
   margin-top: 30px; }
@@ -1586,8 +1604,16 @@ footer {
       line-height: 1.8;
       font-weight: bold;
       letter-spacing: 0.05em; }
+      @media (max-width: 800px) {
+        .circle_area ul li {
+          float: none;
+          margin-left: 0;
+          margin: 0 auto 20px; } }
       .circle_area ul li:first-child {
         margin-left: 0; }
+        @media (max-width: 800px) {
+          .circle_area ul li:first-child {
+            margin: 0 auto 20px; } }
       .circle_area ul li.skyblue {
         background: #54C3F1; }
       .circle_area ul li p {
@@ -1616,6 +1642,10 @@ footer {
       margin-left: 40px;
       height: 152px;
       position: relative; }
+      @media (max-width: 800px) {
+        .strong_area .box03 .inner_box {
+          width: 100%;
+          margin: 25px 24px; } }
       .strong_area .box03 .inner_box:last-child {
         margin-right: 40px; }
       .strong_area .box03 .inner_box p {
@@ -1623,6 +1653,12 @@ footer {
         line-height: 1.8;
         letter-spacing: 0.05em;
         width: 100%; }
+        @media (max-width: 800px) {
+          .strong_area .box03 .inner_box p {
+            text-align: left; } }
+  @media (max-width: 800px) and (max-width: 800px) {
+    .strong_area .box03 .inner_box p br {
+      display: none; } }
   .strong_area:before {
     content: url("../images/company/line01.png");
     display: block;
