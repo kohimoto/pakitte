@@ -1529,18 +1529,32 @@ footer {
       text-align: center;
       font-weight: bold;
       padding: 10px 0; }
+      @media (max-width: 800px) {
+        .tbl dl dt {
+          width: 25%;
+          font-size: 0.9285rem; } }
     .tbl dl dd {
       width: 85%;
       text-align: left;
       border-bottom: 1px solid #036eb7; }
+      @media (max-width: 800px) {
+        .tbl dl dd {
+          width: 75%; } }
       .tbl dl dd p {
         margin: 10px 20px 10px 20px; }
+        @media (max-width: 800px) {
+          .tbl dl dd p {
+            font-size: 0.9285rem; } }
         .tbl dl dd p span {
           display: block;
-          border-top: dashed 1px #036eb7;
+          border-top: dashed 1px #1d2087;
           padding-top: 5px; }
         .tbl dl dd p img {
           margin: 20px 60px 10px; }
+          @media (max-width: 800px) {
+            .tbl dl dd p img {
+              width: 100%;
+              margin-left: 0; } }
   .tbl.skyblue {
     border-color: #54c3f1; }
     .tbl.skyblue dl dt {
@@ -1569,19 +1583,54 @@ footer {
       letter-spacing: 0.02em;
       border-color: #1d2087;
       font-size: 0.9375rem; }
+      @media (max-width: 800px) {
+        .tbl.mix dl dd {
+          line-height: 2.3077; } }
       .tbl.mix dl dd p {
         margin: 10px 30px 10px 0px; }
+        @media (max-width: 800px) {
+          .tbl.mix dl dd p {
+            border-bottom: dashed 1px #1d2087;
+            display: inline;
+            padding-bottom: 8px; } }
         .tbl.mix dl dd p span {
-          border-color: #1d2087; }
+          border-color: #1d2087;
+          margin-right: 30px; }
+          @media (max-width: 800px) {
+            .tbl.mix dl dd p span {
+              display: inline;
+              border-top: none;
+              margin-right: 0; } }
 
 .list {
   margin-top: 20px;
   padding-bottom: 20px; }
+  @media (max-width: 800px) {
+    .list {
+      padding-bottom: 0; } }
   .list div {
     position: relative;
-    height: 80px;
+    min-height: 80px;
+    height: auto;
     margin-bottom: 20px;
-    background: rgba(84, 195, 241, 0.2); }
+    background: rgba(84, 195, 241, 0.2);
+    overflow: hidden;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-box;
+    display: -webkit-flexbox;
+    display: -moz-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: flex;
+    -webkit-box-lines: multiple;
+    -moz-box-lines: multiple;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap; }
     .list div.dark {
       background: rgba(21, 103, 168, 0.2); }
       .list div.dark .num {
@@ -1590,7 +1639,7 @@ footer {
       margin-bottom: 0; }
   .list .num {
     width: 80px;
-    height: 80px;
+    min-height: 80px;
     background: #54c3f1;
     display: block;
     float: left;
@@ -1598,7 +1647,7 @@ footer {
     @media (max-width: 800px) {
       .list .num {
         width: 30px;
-        height: 80px; } }
+        min-height: 80px; } }
     .list .num + p {
       /*position: absolute;
       top: 50%;
@@ -1613,9 +1662,15 @@ footer {
       font-size: 0.9375rem;
       position: relative;
       float: right; }
+      @media (max-width: 800px) {
+        .list .num + p {
+          width: calc(100% - 30px); } }
       .list .num + p span {
         margin: 23px 0px 23px 20px;
         display: block; }
+        @media (max-width: 800px) {
+          .list .num + p span {
+            margin: 10px 20px 10px 20px; } }
     @media (max-width: 800px) {
       .list .num img {
         height: 20px; } }
@@ -1661,6 +1716,9 @@ footer {
 
 .company .info_area {
   margin-top: 60px; }
+  @media (max-width: 800px) {
+    .company .info_area {
+      margin-top: 0; } }
   .company .info_area .tbl {
     margin-bottom: 0; }
 
@@ -1749,6 +1807,9 @@ footer {
   margin: 0 auto; }
   .topmessage .inner {
     padding: 80px 0px; }
+    @media (max-width: 800px) {
+      .topmessage .inner {
+        padding: 50px 0px 0; } }
   .topmessage .message_area {
     position: relative;
     margin-top: 80px;
@@ -1757,15 +1818,27 @@ footer {
     padding: 120px 50px 70px 100px;
     line-height: 2.25;
     letter-spacing: 0.05em; }
+    @media (max-width: 800px) {
+      .topmessage .message_area {
+        background: none;
+        margin-top: 35px;
+        padding: 0 40px; } }
     .topmessage .message_area .p_head {
       font-size: 1.1875rem;
       line-height: 1.895;
       letter-spacing: 0.08em;
       font-weight: bold; }
+      @media (max-width: 800px) {
+        .topmessage .message_area .p_head {
+          text-align: center;
+          font-weight: normal; } }
     .topmessage .message_area .sign {
       text-align: right;
       padding-right: 40px;
       line-height: 2.26; }
+      @media (max-width: 800px) {
+        .topmessage .message_area .sign {
+          padding-right: 0; } }
     .topmessage .message_area .spacer {
       height: 30px; }
     .topmessage .message_area:after {
@@ -1773,6 +1846,9 @@ footer {
       position: absolute;
       bottom: 40px;
       left: -200px; }
+      @media (max-width: 800px) {
+        .topmessage .message_area:after {
+          content: ""; } }
 
 .efforts_area {
   overflow: hidden;
