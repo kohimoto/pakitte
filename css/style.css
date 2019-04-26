@@ -106,7 +106,8 @@ h4 {
   margin-bottom: 50px; }
   @media (max-width: 800px) {
     .wrap {
-      margin-bottom: 60px; } }
+      margin-bottom: 60px;
+      margin-top: 67.27px; } }
 
 .red {
   color: #e50012; }
@@ -320,6 +321,15 @@ h3.h_line:after {
       height: 5px;
       right: 8px; } }
 
+@media (max-width: 800px) {
+  header .container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background: #fff; } }
+
 header .container .inner {
   position: relative;
   padding: 0px 80px; }
@@ -372,7 +382,8 @@ header .sp_menu {
 
 @media (max-width: 800px) {
   header .wrap-menu {
-    display: none; } }
+    display: none;
+    height: 100vh; } }
 
 header .menu01 {
   float: left;

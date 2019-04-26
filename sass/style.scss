@@ -141,6 +141,7 @@ h4 {
   margin-bottom: 50px;
   @include sp {
     margin-bottom: 60px;
+    margin-top: 67.27px;
   }
 }
 .red {
@@ -365,6 +366,14 @@ h3.h_line:after {
 }
 header {
   .container {
+    @include sp {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: #fff;
+    }
     .inner {
       position: relative;
       padding: 0px 80px;
@@ -426,6 +435,7 @@ header {
   .wrap-menu {
     @include sp {
       display: none;
+      height: 100vh;
     }
   }
   .menu01 {
