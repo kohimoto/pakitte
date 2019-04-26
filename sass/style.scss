@@ -1822,6 +1822,7 @@ footer {
       .left {
         width: 20%;
         max-width: 58px;
+        padding: 5px;
         @include sp {
           width: 28px;
         }
@@ -1881,9 +1882,6 @@ footer {
       .right {
         width: calc(100% - 74px);
         font-size: 1rem;
-        @include tab2 {
-          width: calc(100% - 58px);
-        }
         @include sp {
           width: calc(100% - 43px);
         }
@@ -1894,6 +1892,10 @@ footer {
       .ttl {
         .right {
           color: #e50012;
+          margin-bottom: 0;
+          @include sp {
+            margin: 15px 0px;
+          }
         }
       }
     }
@@ -1901,6 +1903,10 @@ footer {
       .ttl {
         .right {
           color: $color_y;
+          margin-bottom: 0;
+          @include sp {
+            margin: 15px 0px;
+          }
         }
       }
     }
@@ -1908,6 +1914,10 @@ footer {
       .ttl {
         .right {
           color: $color_p;
+          margin-bottom: 0;
+          @include sp {
+            margin: 15px 0px;
+          }
         }
       }
     }
@@ -1915,6 +1925,10 @@ footer {
       .ttl {
         .right {
           color: $color_g;
+          margin-bottom: 0;
+          @include sp {
+            margin: 15px 0px;
+          }
         }
       }
     }
@@ -2551,6 +2565,10 @@ footer {
     padding: 120px 50px 70px 100px;
     line-height: 2.25;
     letter-spacing: 0.05em;
+    @include tab2 {
+      background: none;
+      padding: 0 50px;
+    }
     @include sp {
       background: none;
       margin-top: 30px;
@@ -2583,7 +2601,7 @@ footer {
       position: absolute;
       bottom: 40px;
       left: -200px;
-      @include sp {
+      @include tab2 {
         content: "";
       }
     }

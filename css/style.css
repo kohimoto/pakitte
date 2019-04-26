@@ -1529,7 +1529,8 @@ footer {
       margin: 10px 25px !important; } }
   .faq .corner_area .ttl .left {
     width: 20%;
-    max-width: 58px; }
+    max-width: 58px;
+    padding: 5px; }
     @media (max-width: 800px) {
       .faq .corner_area .ttl .left {
         width: 28px; } }
@@ -1580,24 +1581,37 @@ footer {
   .faq .corner_area .txt .right {
     width: calc(100% - 74px);
     font-size: 1rem; }
-    @media (max-width: 1000px) {
-      .faq .corner_area .txt .right {
-        width: calc(100% - 58px); } }
     @media (max-width: 800px) {
       .faq .corner_area .txt .right {
         width: calc(100% - 43px); } }
 
 .faq .corner_area .red .ttl .right {
-  color: #e50012; }
+  color: #e50012;
+  margin-bottom: 0; }
+  @media (max-width: 800px) {
+    .faq .corner_area .red .ttl .right {
+      margin: 15px 0px; } }
 
 .faq .corner_area .yellow .ttl .right {
-  color: #f7b52c; }
+  color: #f7b52c;
+  margin-bottom: 0; }
+  @media (max-width: 800px) {
+    .faq .corner_area .yellow .ttl .right {
+      margin: 15px 0px; } }
 
 .faq .corner_area .pink .ttl .right {
-  color: #f29c97; }
+  color: #f29c97;
+  margin-bottom: 0; }
+  @media (max-width: 800px) {
+    .faq .corner_area .pink .ttl .right {
+      margin: 15px 0px; } }
 
 .faq .corner_area .green .ttl .right {
-  color: #377238; }
+  color: #377238;
+  margin-bottom: 0; }
+  @media (max-width: 800px) {
+    .faq .corner_area .green .ttl .right {
+      margin: 15px 0px; } }
 
 .history .h_line {
   background: #54c3f1;
@@ -2137,6 +2151,10 @@ footer {
     padding: 120px 50px 70px 100px;
     line-height: 2.25;
     letter-spacing: 0.05em; }
+    @media (max-width: 1000px) {
+      .topmessage .message_area {
+        background: none;
+        padding: 0 50px; } }
     @media (max-width: 800px) {
       .topmessage .message_area {
         background: none;
@@ -2166,7 +2184,7 @@ footer {
       position: absolute;
       bottom: 40px;
       left: -200px; }
-      @media (max-width: 800px) {
+      @media (max-width: 1000px) {
         .topmessage .message_area:after {
           content: ""; } }
 
