@@ -1881,6 +1881,7 @@ footer {
         width: calc(28% - 10px);
         font-size: 0.9285rem;
         padding: 0;
+        padding: 4px 0;
       }
     }
     dd {
@@ -1891,7 +1892,9 @@ footer {
         width: 72%;
         font-size: 0.9375rem;
         line-height: 0;
-        margin: 0 5px;
+        margin: 0;
+        padding-right: 5px;
+        padding-left: 5px;
       }
       p {
         margin: 10px 20px 10px 20px;
@@ -1902,6 +1905,7 @@ footer {
           padding-bottom: 8px;
           line-height: 2.3077;
           margin: 0;
+          word-break: break-all;
         }
         span {
           display: block;
@@ -1927,11 +1931,22 @@ footer {
       dl {
         dt {
           background: #54c3f1;
+          @include sp {
+            width: calc(28% - 10px);
+          }
         }
         dd {
           border-color: #54c3f1;
+          @include sp {
+            width: 72%;
+          }
           span {
             border-color: #54c3f1;
+          }
+          p {
+            @include sp {
+              border-bottom: 1px dashed #54c3f1;
+            }
           }
         }
       }
@@ -1943,9 +1958,6 @@ footer {
       dt {
         background: transparent;
         border-bottom: 1px solid #1d2087;
-        @include sp {
-          width: calc(25% - 5px);
-        }
         &.b_01 {
           color: #2ca6e0;
         }
@@ -1970,7 +1982,7 @@ footer {
         font-size: 0.9375rem;
         @include sp {
           line-height: 0;
-          margin: 0 5px 0 0;
+          margin: 0;
         }
         p {
           margin: 10px 0px 10px 0px;

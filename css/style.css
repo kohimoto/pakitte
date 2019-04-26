@@ -1543,7 +1543,8 @@ footer {
         .tbl dl dt {
           width: calc(28% - 10px);
           font-size: 0.9285rem;
-          padding: 0; } }
+          padding: 0;
+          padding: 4px 0; } }
     .tbl dl dd {
       width: 85%;
       text-align: left;
@@ -1553,7 +1554,9 @@ footer {
           width: 72%;
           font-size: 0.9375rem;
           line-height: 0;
-          margin: 0 5px; } }
+          margin: 0;
+          padding-right: 5px;
+          padding-left: 5px; } }
       .tbl dl dd p {
         margin: 10px 20px 10px 20px; }
         @media (max-width: 800px) {
@@ -1563,7 +1566,8 @@ footer {
             border-bottom: dashed 1px #036eb7;
             padding-bottom: 8px;
             line-height: 2.3077;
-            margin: 0; } }
+            margin: 0;
+            word-break: break-all; } }
         .tbl dl dd p span {
           display: block;
           border-top: dashed 1px #036eb7;
@@ -1582,19 +1586,25 @@ footer {
     border-color: #54c3f1; }
     .tbl.skyblue dl dt {
       background: #54c3f1; }
+      @media (max-width: 800px) {
+        .tbl.skyblue dl dt {
+          width: calc(28% - 10px); } }
     .tbl.skyblue dl dd {
       border-color: #54c3f1; }
+      @media (max-width: 800px) {
+        .tbl.skyblue dl dd {
+          width: 72%; } }
       .tbl.skyblue dl dd span {
         border-color: #54c3f1; }
+      @media (max-width: 800px) {
+        .tbl.skyblue dl dd p {
+          border-bottom: 1px dashed #54c3f1; } }
   .tbl.mix {
     border-color: #1d2087;
     margin-top: 10px; }
     .tbl.mix dl dt {
       background: transparent;
       border-bottom: 1px solid #1d2087; }
-      @media (max-width: 800px) {
-        .tbl.mix dl dt {
-          width: calc(25% - 5px); } }
       .tbl.mix dl dt.b_01 {
         color: #2ca6e0; }
       .tbl.mix dl dt.b_02 {
@@ -1612,7 +1622,7 @@ footer {
       @media (max-width: 800px) {
         .tbl.mix dl dd {
           line-height: 0;
-          margin: 0 5px 0 0; } }
+          margin: 0; } }
       .tbl.mix dl dd p {
         margin: 10px 0px 10px 0px; }
         @media (max-width: 800px) {
