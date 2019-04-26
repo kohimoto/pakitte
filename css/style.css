@@ -379,12 +379,22 @@ header .menu01 {
   margin: 27px 0px 23px 50px;
   overflow: hidden;
   padding-left: 0; }
+  @media (max-width: 1000px) {
+    header .menu01 {
+      margin: 27px 0px 23px 20px; } }
   @media (max-width: 800px) {
     header .menu01 {
       float: none;
       margin: 0px; } }
   header .menu01 li {
     margin-left: 30px; }
+    @media (max-width: 1000px) {
+      header .menu01 li {
+        margin-left: 10px;
+        font-size: 0.8rem; } }
+    @media (max-width: 800px) {
+      header .menu01 li {
+        font-size: 1rem; } }
     header .menu01 li:first-child {
       margin-left: 0; }
     header .menu01 li.active a {
@@ -410,6 +420,14 @@ header .menu02 {
     padding: 5px 0px 3px;
     width: 145px;
     text-align: center; }
+    @media (max-width: 1200px) {
+      header .menu02 li {
+        margin-left: 0;
+        width: 100px; } }
+    @media (max-width: 1000px) {
+      header .menu02 li {
+        margin-left: 0;
+        width: 80px; } }
     @media (max-width: 800px) {
       header .menu02 li {
         margin-left: 0;
@@ -418,6 +436,12 @@ header .menu02 {
       width: 100%;
       height: 100%;
       display: block; }
+      @media (max-width: 1000px) {
+        header .menu02 li a {
+          font-size: 0.725rem; } }
+      @media (max-width: 800px) {
+        header .menu02 li a {
+          font-size: 1rem; } }
     header .menu02 li:first-child {
       margin-left: 0; }
     header .menu02 li.color {
@@ -554,7 +578,12 @@ footer {
     .scene .inner h2 img {
       width: 108px; } }
   .scene .inner h4 {
-    letter-spacing: 0.0em; }
+    font-size: 1.4375rem;
+    padding-bottom: 30px; }
+    @media (max-width: 1000px) {
+      .scene .inner h4 {
+        font-size: 1.2rem;
+        padding-bottom: 10px; } }
     @media (max-width: 800px) {
       .scene .inner h4 {
         font-size: 1.072rem;
@@ -632,6 +661,10 @@ footer {
     line-height: 1;
     padding: 35px 0 25px;
     letter-spacing: 0.1em; }
+    @media (max-width: 1000px) {
+      .box dl dd {
+        padding: 20px 0 10px;
+        font-size: 1.5rem; } }
     @media (max-width: 800px) {
       .box dl dd {
         font-size: 1.286rem;
@@ -643,11 +676,13 @@ footer {
   .frame.border_p {
     border-color: #f29c97;
     margin-bottom: 150px; }
-    @media (max-width: 800px) {
+    @media (max-width: 1200px) {
       .frame.border_p {
-        margin-bottom: 35px;
         margin-left: 40px;
         margin-right: 40px; } }
+    @media (max-width: 800px) {
+      .frame.border_p {
+        margin-bottom: 35px; } }
     .frame.border_p .inner_right {
       margin-left: 54px;
       width: calc(100% - 429px); }
@@ -658,6 +693,10 @@ footer {
       @media (max-width: 800px) {
         .frame.border_p .inner_right img {
           width: 100%; } }
+    @media (max-width: 1000px) {
+      .frame.border_p h4 {
+        font-size: 1.2rem;
+        padding-bottom: 10px; } }
   .frame .box {
     padding: 30px 75px;
     margin-bottom: 0; }
@@ -758,10 +797,15 @@ footer {
     .box03.box_type div.inner_box:first-child {
       margin-left: 0; }
 
+@media (max-width: 1000px) {
+  .box_size .inner_box picture img {
+    height: 380px; } }
+
 @media (max-width: 800px) {
   .box_size .inner_box picture img {
     width: 100%;
-    display: block; } }
+    display: block;
+    height: auto; } }
 
 @media (max-width: 800px) {
   .product .inner {
