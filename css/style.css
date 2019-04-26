@@ -434,7 +434,8 @@ header .menu01 {
       margin-left: 0; }
     header .menu01 li.active a {
       border-bottom: 1px solid;
-      padding-bottom: 6px; }
+      padding-bottom: 6px;
+      display: block; }
       @media (max-width: 800px) {
         header .menu01 li.active a {
           border-bottom: 0; } }
