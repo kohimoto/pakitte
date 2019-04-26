@@ -20,10 +20,10 @@ $color_b: #804f21;
 /* =======================================================
 * media query
 * ======================================================= */
-$tab: 1060px;   // tab
+$tab1: 1200px;   // tab
 $sp: 800px;     // sp
-@mixin tab {
-  @media (max-width: ($tab)) {
+@mixin tab1 {
+  @media (max-width: ($tab1)) {
     @content;
   }
 }
@@ -2074,7 +2074,7 @@ footer {
         width: calc(100% - 30px);
       }
       span {
-        margin: 23px 0px 23px 20px;
+        margin: 23px 20px 23px 20px;
         display: block;
         @include sp {
           margin: 10px 20px 10px 20px;
@@ -2099,6 +2099,14 @@ footer {
   margin-top: 30px;
   ul {
     overflow: hidden;
+    @include tab1 {
+      width: 740px;
+      margin: 0 auto;
+    }
+    @include sp {
+      width: auto;
+      margin: 0;
+    }
     li {
       position: relative;
       float: left;
@@ -2112,10 +2120,19 @@ footer {
       line-height: 1.8;
       font-weight: bold;
       letter-spacing: 0.05em;
+      @include tab1 {
+        width: 140px;
+        height: 140px;
+        font-size: 0.725rem;
+        margin-left: 5px;
+      }
       @include sp {
         float: none;
         margin-left: 0;
         margin: 0 auto 20px;
+        width: 190px;
+        height: 190px;
+        font-size: 0.9375rem;
       }
       &:first-child {
         margin-left: 0;
@@ -2149,10 +2166,6 @@ footer {
   color: #1D2087;
   margin-top: 70px;
   position: relative;
-  h4 {
-    padding-bottom: 25px;
-    padding-top: 35px;
-  }
   .box03 {
     margin-top: 0;
     padding-bottom: 35px;
@@ -2163,6 +2176,9 @@ footer {
       margin-left: 40px;
       height: 152px;
       position: relative;
+      @include tab1 {
+        height: 240px;
+      }
       @include sp {
         width: 100%;
         margin: 25px 24px;
@@ -2203,6 +2219,12 @@ footer {
   }
 }
 .space_block {
+  .strong_area {
+    h4.color {
+      padding-bottom: 25px;
+      padding-top: 35px;
+    }
+  }
   h4 {
     &.color {
       font-size: 1.5625rem;

@@ -1704,7 +1704,7 @@ footer {
         .list .num + p {
           width: calc(100% - 30px); } }
       .list .num + p span {
-        margin: 23px 0px 23px 20px;
+        margin: 23px 20px 23px 20px;
         display: block; }
         @media (max-width: 800px) {
           .list .num + p span {
@@ -1724,6 +1724,14 @@ footer {
   margin-top: 30px; }
   .circle_area ul {
     overflow: hidden; }
+    @media (max-width: 1200px) {
+      .circle_area ul {
+        width: 740px;
+        margin: 0 auto; } }
+    @media (max-width: 800px) {
+      .circle_area ul {
+        width: auto;
+        margin: 0; } }
     .circle_area ul li {
       position: relative;
       float: left;
@@ -1737,11 +1745,20 @@ footer {
       line-height: 1.8;
       font-weight: bold;
       letter-spacing: 0.05em; }
+      @media (max-width: 1200px) {
+        .circle_area ul li {
+          width: 140px;
+          height: 140px;
+          font-size: 0.725rem;
+          margin-left: 5px; } }
       @media (max-width: 800px) {
         .circle_area ul li {
           float: none;
           margin-left: 0;
-          margin: 0 auto 20px; } }
+          margin: 0 auto 20px;
+          width: 190px;
+          height: 190px;
+          font-size: 0.9375rem; } }
       .circle_area ul li:first-child {
         margin-left: 0; }
         @media (max-width: 800px) {
@@ -1765,9 +1782,6 @@ footer {
   color: #1D2087;
   margin-top: 70px;
   position: relative; }
-  .strong_area h4 {
-    padding-bottom: 25px;
-    padding-top: 35px; }
   .strong_area .box03 {
     margin-top: 0;
     padding-bottom: 35px; }
@@ -1778,6 +1792,9 @@ footer {
       margin-left: 40px;
       height: 152px;
       position: relative; }
+      @media (max-width: 1200px) {
+        .strong_area .box03 .inner_box {
+          height: 240px; } }
       @media (max-width: 800px) {
         .strong_area .box03 .inner_box {
           width: 100%;
@@ -1808,6 +1825,10 @@ footer {
     position: absolute;
     bottom: -23px;
     left: -10px; }
+
+.space_block .strong_area h4.color {
+  padding-bottom: 25px;
+  padding-top: 35px; }
 
 .space_block h4.color {
   font-size: 1.5625rem;
