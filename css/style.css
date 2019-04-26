@@ -1444,6 +1444,9 @@ footer {
 .history .h_line {
   background: #54c3f1;
   margin: 70px 0 50px; }
+  @media (max-width: 800px) {
+    .history .h_line {
+      margin: 30px 0 25px; } }
 
 .history .box {
   padding: 0 60px;
