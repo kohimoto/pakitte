@@ -20,10 +20,16 @@ $color_b: #804f21;
 /* =======================================================
 * media query
 * ======================================================= */
-$tab1: 1200px;   // tab
+$tab1: 1200px;   // tab1
+$tab2: 1000px;   // tab2
 $sp: 800px;     // sp
 @mixin tab1 {
   @media (max-width: ($tab1)) {
+    @content;
+  }
+}
+@mixin tab2 {
+  @media (max-width: ($tab2)) {
     @content;
   }
 }
@@ -427,12 +433,22 @@ header {
     margin: 27px 0px 23px 50px;
     overflow: hidden;
     padding-left: 0;
+    @include tab2 {
+       margin: 27px 0px 23px 20px;
+    }
       @include sp {
         float: none;
         margin: 0px;
       }
     li {
       margin-left: 30px;
+      @include tab2 {
+       margin-left: 10px;
+       font-size: 0.8rem;
+      }
+      @include sp {
+        font-size: 1rem;
+      }
       &:first-child {
         margin-left: 0;
       }
@@ -463,6 +479,14 @@ header {
       padding: 5px 0px 3px;
       width: 145px;
       text-align: center;
+      @include tab1 {
+        margin-left: 0;
+        width: 100px;
+      }
+      @include tab2 {
+        margin-left: 0;
+        width: 80px;
+      }
       @include sp {
         margin-left: 0;
         width: 100%;
@@ -471,6 +495,12 @@ header {
         width: 100%;
         height: 100%;
         display: block;
+        @include tab2 {
+          font-size: 0.725rem;
+        }
+        @include sp {
+          font-size: 1rem;
+        }
       }
       &:first-child {
         margin-left: 0;
@@ -639,7 +669,12 @@ footer {
       }
     }
     h4 {
-      letter-spacing: 0.0em;
+      font-size: 1.4375rem;
+      padding-bottom: 30px;
+      @include tab2 {
+        font-size: 1.2rem;
+        padding-bottom: 10px;
+      }
       @include sp {
         font-size: 1.072rem;
         padding-bottom: 25px;
@@ -729,6 +764,10 @@ footer {
       line-height: 1;
       padding: 35px 0 25px;
       letter-spacing: 0.1em;
+      @include tab2 {
+        padding: 20px 0 10px;
+        font-size: 1.5rem;
+      }
       @include sp {
         font-size: 1.286rem;
         padding: 30px 0 15px;
@@ -742,10 +781,12 @@ footer {
   &.border_p {
     border-color: $color_p;
     margin-bottom: 150px;
-    @include sp {
-      margin-bottom: 35px;
+    @include tab1 {
       margin-left: 40px;
       margin-right: 40px;
+    }
+    @include sp {
+      margin-bottom: 35px;
     }
     .inner_right {
       margin-left: 54px;
@@ -758,6 +799,12 @@ footer {
         @include sp {
           width: 100%;
         }
+      }
+    }
+    h4 {
+      @include tab2 {
+        font-size: 1.2rem;
+        padding-bottom: 10px;
       }
     }
   }
@@ -883,9 +930,13 @@ footer {
   .inner_box {
     picture {
       img {
+        @include tab2 {
+          height: 380px;
+        }
         @include sp {
           width: 100%;
           display: block;
+          height: auto;
         }
       }
     }
