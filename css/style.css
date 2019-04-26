@@ -1860,10 +1860,14 @@ footer {
           height: 240px; } }
       @media (max-width: 800px) {
         .strong_area .box03 .inner_box {
-          width: 100%;
-          margin: 25px 24px; } }
+          width: auto;
+          margin: 25px 25px;
+          height: auto; } }
       .strong_area .box03 .inner_box:last-child {
         margin-right: 40px; }
+        @media (max-width: 800px) {
+          .strong_area .box03 .inner_box:last-child {
+            margin-right: 25px; } }
       .strong_area .box03 .inner_box p {
         font-size: 0.875rem;
         line-height: 1.8;
@@ -1871,7 +1875,17 @@ footer {
         width: 100%; }
         @media (max-width: 800px) {
           .strong_area .box03 .inner_box p {
-            text-align: left; } }
+            text-align: left;
+            font-size: 1rem;
+            line-height: 1.715;
+            position: relative;
+            top: auto;
+            left: auto;
+            -webkit-transform: none;
+            -ms-transform: none;
+            transform: none;
+            margin: 20px 0;
+            word-break: break-all; } }
   @media (max-width: 800px) and (max-width: 800px) {
     .strong_area .box03 .inner_box p br {
       display: none; } }
@@ -1882,16 +1896,31 @@ footer {
     right: -10px;
     top: -10px;
     z-index: 2; }
+    @media (max-width: 800px) {
+      .strong_area:before {
+        width: 35px;
+        height: 35px;
+        overflow: hidden; } }
   .strong_area:after {
     content: url("../images/company/line02.png");
     display: block;
     position: absolute;
     bottom: -23px;
     left: -10px; }
+    @media (max-width: 800px) {
+      .strong_area:after {
+        width: 35px;
+        height: 35px;
+        overflow: hidden;
+        bottom: -10px; } }
 
 .space_block .strong_area h4.color {
   padding-bottom: 25px;
   padding-top: 35px; }
+  @media (max-width: 800px) {
+    .space_block .strong_area h4.color {
+      padding-bottom: 0;
+      line-height: 1.485; } }
 
 .space_block h4.color {
   font-size: 1.5625rem;

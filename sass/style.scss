@@ -2250,11 +2250,15 @@ footer {
         height: 240px;
       }
       @include sp {
-        width: 100%;
-        margin: 25px 24px;
+        width: auto;
+        margin: 25px 25px;
+        height: auto;
       }
       &:last-child {
         margin-right: 40px;
+        @include sp {
+          margin-right: 25px;
+        }
       }
       p {
         font-size:0.875rem;
@@ -2263,6 +2267,15 @@ footer {
         width: 100%;
         @include sp {
           text-align: left;
+          font-size: 1rem;
+          line-height: 1.715;
+          position: relative;
+          top: auto;
+          left: auto;
+          transform: none;
+          margin: 20px 0;
+          word-break: break-all;
+
           br {
             @include sp {
               display: none;
@@ -2279,6 +2292,11 @@ footer {
     right: -10px;
     top: -10px;
     z-index: 2;
+    @include sp {
+      width: 35px;
+      height: 35px;
+      overflow: hidden;
+    }
   }
   &:after {
     content: url("../images/company/line02.png");
@@ -2286,6 +2304,12 @@ footer {
     position: absolute;
     bottom: -23px;
     left: -10px;
+    @include sp {
+      width: 35px;
+      height: 35px;
+      overflow: hidden;
+      bottom: -10px;
+    }
   }
 }
 .space_block {
@@ -2293,6 +2317,10 @@ footer {
     h4.color {
       padding-bottom: 25px;
       padding-top: 35px;
+      @include sp {
+        padding-bottom: 0;
+        line-height: 1.485;
+      }
     }
   }
   h4 {
