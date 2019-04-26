@@ -496,6 +496,7 @@ header {
         a {
           border-bottom: 1px solid;
           padding-bottom: 6px;
+          display: block;
           @include sp {
             border-bottom: 0;
           }
