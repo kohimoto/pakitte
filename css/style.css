@@ -1538,7 +1538,7 @@ footer {
       border-bottom: 1px solid #fff;
       text-align: center;
       font-weight: bold;
-      padding: 10px 0; }
+      padding: 7px 0 5px; }
       @media (max-width: 800px) {
         .tbl dl dt {
           width: calc(28% - 10px);
@@ -1555,7 +1555,7 @@ footer {
           line-height: 0;
           margin: 0 5px; } }
       .tbl dl dd p {
-        margin: 10px 20px 10px 20px; }
+        margin: 5px 20px; }
         @media (max-width: 800px) {
           .tbl dl dd p {
             font-size: 0.9285rem;
@@ -1614,7 +1614,7 @@ footer {
           line-height: 0;
           margin: 0 5px 0 0; } }
       .tbl.mix dl dd p {
-        margin: 10px 0px 10px 0px; }
+        margin: 5px 0px; }
         @media (max-width: 800px) {
           .tbl.mix dl dd p {
             border-bottom: dashed 1px #1d2087;
