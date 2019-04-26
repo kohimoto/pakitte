@@ -347,7 +347,7 @@ header .container ul li {
       text-align: left;
       border-bottom: 1px solid;
       border: none;
-      padding: 8px 0;
+      padding: 10px 0;
       text-indent: 1em;
       border-bottom: 1px solid; } }
 
@@ -411,6 +411,9 @@ header .menu01 {
     header .menu01 li.active a {
       border-bottom: 1px solid;
       padding-bottom: 6px; }
+      @media (max-width: 800px) {
+        header .menu01 li.active a {
+          border-bottom: 0; } }
     @media (max-width: 800px) {
       header .menu01 li {
         margin-left: 0; } }
@@ -484,19 +487,22 @@ header .menu02 {
       background: #fff;
       font-weight: normal;
       border-bottom: 0; }
-      header .menu02 .inner_menu li:last-child {
-        border-bottom: 1px solid #b5b5b6; }
       @media (max-width: 800px) {
         header .menu02 .inner_menu li {
-          padding-left: 10px;
+          padding-left: 0px;
           border-bottom: none;
-          padding-bottom: 0; } }
+          padding-bottom: 0;
+          padding-top: 5px; } }
+      header .menu02 .inner_menu li:last-child {
+        border-bottom: 1px solid #b5b5b6; }
+        @media (max-width: 800px) {
+          header .menu02 .inner_menu li:last-child {
+            border-bottom: none; } }
       header .menu02 .inner_menu li.active {
         background: #595757; }
         @media (max-width: 800px) {
           header .menu02 .inner_menu li.active {
-            background: #fff;
-            font-weight: bold; } }
+            background: #fff; } }
         header .menu02 .inner_menu li.active a {
           color: #fff; }
           @media (max-width: 800px) {
@@ -2028,7 +2034,8 @@ footer {
       .topmessage .message_area {
         background: none;
         margin-top: 35px;
-        padding: 0 40px; } }
+        padding: 0 40px;
+        line-height: 1.715; } }
     .topmessage .message_area .p_head {
       font-size: 1.1875rem;
       line-height: 1.895;

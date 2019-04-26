@@ -392,7 +392,7 @@ header {
           text-align: left;
           border-bottom: 1px solid;
           border: none;
-          padding: 8px 0;
+          padding: 10px 0;
           text-indent: 1em;
           border-bottom: 1px solid;
         }
@@ -466,6 +466,9 @@ header {
         a {
           border-bottom: 1px solid;
           padding-bottom: 6px;
+          @include sp {
+            border-bottom: 0;
+          }
         }
       }
       @include sp {
@@ -549,19 +552,22 @@ header {
         background: #fff;
         font-weight: normal;
         border-bottom: 0;
-        &:last-child{
-          border-bottom: 1px solid #b5b5b6;
-        }
         @include sp {
-          padding-left: 10px;
+          padding-left: 0px;
           border-bottom: none;
           padding-bottom: 0;
+          padding-top: 5px;
+        }
+        &:last-child{
+          border-bottom: 1px solid #b5b5b6;
+          @include sp {
+            border-bottom: none;
+          }
         }
           &.active {
           background: #595757;
           @include sp {
             background: #fff;
-            font-weight: bold;
           }
           a {
             color: #fff;
@@ -2441,6 +2447,7 @@ footer {
       background: none;
       margin-top: 35px;
       padding: 0 40px;
+      line-height: 1.715;
     }
     .p_head {
       font-size: 1.1875rem;
