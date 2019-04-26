@@ -96,13 +96,18 @@ a {
 
 }
 h2 {
-  line-height: 1.75;
   text-align: center;
+  line-height: 1;
+  margin-bottom: 30px;
+  @include sp {
+    margin-bottom: 20px;
+  }
   img {
-  margin: 0 auto;
+    margin: 0 auto;
     @include sp {
       /*max-width: 100%;*/
-      height: 25px;
+      max-width: 100%;
+      max-height: 25px;
     }
   }
 }
@@ -241,7 +246,7 @@ h4 {
     display: block;
     max-width: 100%;
     @include sp {
-      height: 120px;
+      min-height: 120px;
       max-width: none;
       object-fit: cover;
       object-position: center;
@@ -702,13 +707,6 @@ footer {
 .scene {
   .inner {
     padding-bottom: 0;
-    h2 {
-      img {
-        @include sp {
-          width: 108px;
-        }
-      }
-    }
     h4 {
       font-size: 1.4375rem;
       padding-bottom: 30px;
@@ -988,13 +986,6 @@ footer {
     @include sp {
       padding-bottom: 65px;
     }
-    h2 {
-      img {
-      @include sp {
-        width: 153px;
-      }
-      }
-    }
     p {
       @include sp {
         text-align: left;
@@ -1106,13 +1097,6 @@ footer {
 .development {
   .inner {
     padding-bottom: 0;
-  }
-  h2 {
-    img {
-      @include sp {
-        width: 238px;
-      }
-    }
   }
   h4 {
     font-size: 1.5625rem;
