@@ -101,6 +101,18 @@ $('.havemenu').hover(
       modalSwitch(w);
   });
 
+
+  //----- sp toggle -------//
+  $('.sp_menu').click(function(){
+    if($(this).hasClass('open')) {
+      $('header .wrap-menu').slideUp();
+      $(this).removeClass('open');
+    } else {
+      $('header .wrap-menu').slideDown();
+      $(this).addClass('open');
+    }
+  });
+
 });
 
 //------- FUNCTION -------//
@@ -166,8 +178,6 @@ function modalSwitch(w) {
      var newHref = result;
      $(this).attr('href' , newHref);
    });
-
-
   } else {
   }
 }

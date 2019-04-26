@@ -96,12 +96,18 @@ a {
 
 }
 h2 {
-  line-height: 1.75;
   text-align: center;
+  line-height: 1;
+  margin-bottom: 30px;
+  @include sp {
+    margin-bottom: 20px;
+  }
   img {
-  margin: 0 auto;
+    margin: 0 auto;
     @include sp {
+      /*max-width: 100%;*/
       max-width: 100%;
+      max-height: 25px;
     }
   }
 }
@@ -121,12 +127,21 @@ h3 {
     position: relative;
 
     &:before {
-      content: url("../images/mark.png");
+      content: "";
       position: absolute;
-      top: -35px;
+      top: -20px;
       left: -7px;
+      background: url(../images/mark.png) no-repeat;
+      background-size: 27px;
+      display: block;
+      width: 27px;
+      height: 16px;
       @include sp {
-        top: -20px;
+        top: -10px;
+        left: -2px;
+        width: 14px;
+        height: 8px;
+        background-size: 14px;
       }
     }
   }
@@ -141,6 +156,7 @@ h4 {
   margin-bottom: 50px;
   @include sp {
     margin-bottom: 60px;
+    margin-top: 67.27px;
   }
 }
 .red {
@@ -185,6 +201,13 @@ h4 {
     @include sp {
       padding: 50px 40px 0;
     }
+    .ex {
+      br {
+        @include sp {
+          display: none;
+        }
+      }
+    }
   }
 }
 .center_center {
@@ -223,7 +246,7 @@ h4 {
     display: block;
     max-width: 100%;
     @include sp {
-      height: 120px;
+      min-height: 120px;
       max-width: none;
       object-fit: cover;
       object-position: center;
@@ -291,13 +314,15 @@ h4 {
     @include sp {
       max-width: 100%;
       width: auto;
-      margin: 0 40px;
+      /*margin: 0 40px;*/
+      padding: 20px 15px;
     }
     p {
       font-size: 1.5635rem;
       color: #e50012;
       @include sp {
         font-size: 1rem;
+        letter-spacing: 0em;
       }
     }
   }
@@ -365,6 +390,14 @@ h3.h_line:after {
 }
 header {
   .container {
+    @include sp {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 100;
+      background: #fff;
+    }
     .inner {
       position: relative;
       padding: 0px 80px;
@@ -383,7 +416,7 @@ header {
           text-align: left;
           border-bottom: 1px solid;
           border: none;
-          padding: 8px 0;
+          padding: 10px 0;
           text-indent: 1em;
           border-bottom: 1px solid;
         }
@@ -399,6 +432,12 @@ header {
       height: 27.27px;
       width: 47px;
       margin: 20px 0;
+    }
+    a {
+      display: block;
+      &:hover {
+        cursor: pointer;
+      }
     }
     img {
       width: 60px;
@@ -426,6 +465,7 @@ header {
   .wrap-menu {
     @include sp {
       display: none;
+      height: 100vh;
     }
   }
   .menu01 {
@@ -456,6 +496,9 @@ header {
         a {
           border-bottom: 1px solid;
           padding-bottom: 6px;
+          @include sp {
+            border-bottom: 0;
+          }
         }
       }
       @include sp {
@@ -539,19 +582,22 @@ header {
         background: #fff;
         font-weight: normal;
         border-bottom: 0;
-        &:last-child{
-          border-bottom: 1px solid #b5b5b6;
-        }
         @include sp {
-          padding-left: 10px;
+          padding-left: 0px;
           border-bottom: none;
           padding-bottom: 0;
+          padding-top: 5px;
+        }
+        &:last-child{
+          border-bottom: 1px solid #b5b5b6;
+          @include sp {
+            border-bottom: none;
+          }
         }
           &.active {
           background: #595757;
           @include sp {
             background: #fff;
-            font-weight: bold;
           }
           a {
             color: #fff;
@@ -613,7 +659,7 @@ footer {
     }
     img {
       @include sp {
-        width: 280px;
+        /*width: 280px;*/
       }
     }
   }
@@ -661,13 +707,6 @@ footer {
 .scene {
   .inner {
     padding-bottom: 0;
-    h2 {
-      img {
-        @include sp {
-          width: 108px;
-        }
-      }
-    }
     h4 {
       font-size: 1.4375rem;
       padding-bottom: 30px;
@@ -947,13 +986,6 @@ footer {
     @include sp {
       padding-bottom: 65px;
     }
-    h2 {
-      img {
-      @include sp {
-        width: 153px;
-      }
-      }
-    }
     p {
       @include sp {
         text-align: left;
@@ -975,6 +1007,9 @@ footer {
     .wrap_motion {
       position: relative;
       height: 400px;
+      @include sp {
+        height: 500px;
+      }
       div {
         position: relative;
         width: 25%;
@@ -1063,13 +1098,6 @@ footer {
   .inner {
     padding-bottom: 0;
   }
-  h2 {
-    img {
-      @include sp {
-        width: 238px;
-      }
-    }
-  }
   h4 {
     font-size: 1.5625rem;
     padding-bottom: 0px;
@@ -1121,7 +1149,7 @@ footer {
     display: block;
     max-width: 100%;
     @include sp {
-      margin: 0 40px;
+      /*margin: 0 40px;*/
     }
     img {
       max-width: 100%;
@@ -1147,6 +1175,10 @@ footer {
   .inner {
     h3 {
       padding: 20px 0 40px;
+      @include sp {
+        padding: 20px 0 30px;
+        font-size: 1rem;
+      }
       &.h_line  {
         background: #e50012;
         @include sp {
@@ -1157,6 +1189,10 @@ footer {
     h4 {
       letter-spacing: 0.08em;
       padding-bottom: 10px;
+      @include sp {
+        font-size: 1.1429rem;
+        padding-bottom: 30px;
+      }
     }
     img.img_h {
       margin-bottom: 40px;
@@ -1166,6 +1202,9 @@ footer {
     }
     .line_area {
       padding: 30px 0;
+      @include sp {
+        padding: 30px 0 0;
+      }
       p {
         font-size: 1.25rem;
         line-height: 1.8;
@@ -1191,7 +1230,8 @@ footer {
   }
   @include sp {
     overflow: visible;
-    margin: 40px 0 40px;
+    height: auto;
+    margin: 30px 0 30px;
   }
   &.line_01 {
     .right {
@@ -1236,6 +1276,7 @@ footer {
         }
         @include sp {
          text-align: center;
+         padding: 18px 0 10px 5px;
         }
       }
       &:nth-child(2) {
@@ -1257,6 +1298,7 @@ footer {
           padding-right: 0;
           font-size: 0.929rem;
           border-right: none;
+          margin: 12px 0;
         }
       }
     }
@@ -1290,6 +1332,9 @@ footer {
         font-size: 0.9375rem;
         padding-left: 0;
         margin: 15px 0;
+        br {
+          display: none;
+        }
       }
     }
   }
@@ -1317,6 +1362,7 @@ footer {
           letter-spacing: 0.05em;
           @include sp {
             font-size: 1rem;
+            margin-bottom: 0;
           }
         }
         span {
@@ -1610,7 +1656,7 @@ footer {
     overflow: hidden;
     @include sp {
       overflow: visible;
-      margin-top: 120px;
+      margin-top: 100px;
     }
     .corner_box {
       width: 100%;
@@ -1738,6 +1784,9 @@ footer {
   }
   h3 {
     padding: 0;
+    @include sp {
+      font-size: 1rem;
+    }
   }
   h4 {
     line-height: 1.95;
@@ -1787,6 +1836,7 @@ footer {
         @include sp {
           width: calc(100% - 58px);
           margin: 15px 0px;
+          width: calc(100% - 43px);
         }
         span {
           display: block;
@@ -1806,7 +1856,8 @@ footer {
             transform: none;
             -webkit-transform: none;
             -ms-transform: none;
-            margin-left: 0;
+            margin: 0;
+            width: 100%;
           }
         }
       }
@@ -1832,6 +1883,9 @@ footer {
         font-size: 1rem;
         @include tab2 {
           width: calc(100% - 58px);
+        }
+        @include sp {
+          width: calc(100% - 43px);
         }
       }
 
@@ -2001,6 +2055,7 @@ footer {
   margin-bottom: 40px;
   @include sp {
     font-size: 1rem;
+    margin-bottom: 30px;
   }
   &.skyblue {
     color: #54c3f1;
@@ -2059,7 +2114,7 @@ footer {
       padding: 7px 0 5px;
       @include sp {
         width: calc(28% - 10px);
-        font-size: 0.9285rem;
+        font-size: 0.785rem;
         padding: 0;
         padding: 4px 0;
       }
@@ -2273,6 +2328,11 @@ footer {
   line-height: 1.9;
   @include sp {
     font-size: 1rem;
+    text-align: left;
+    margin-top: 20px;
+    br {
+      display: none;
+    }
   }
 }
 .circle_area {
@@ -2346,6 +2406,9 @@ footer {
   color: #1D2087;
   margin-top: 70px;
   position: relative;
+  @include sp {
+    margin-top: 50px;
+  }
   .box03 {
     margin-top: 0;
     padding-bottom: 35px;
@@ -2360,11 +2423,15 @@ footer {
         height: 240px;
       }
       @include sp {
-        width: 100%;
-        margin: 25px 24px;
+        width: auto;
+        margin: 25px 25px;
+        height: auto;
       }
       &:last-child {
         margin-right: 40px;
+        @include sp {
+          margin-right: 25px;
+        }
       }
       p {
         font-size:0.875rem;
@@ -2373,6 +2440,15 @@ footer {
         width: 100%;
         @include sp {
           text-align: left;
+          font-size: 1rem;
+          line-height: 1.715;
+          position: relative;
+          top: auto;
+          left: auto;
+          transform: none;
+          margin: 20px 0;
+          word-break: break-all;
+
           br {
             @include sp {
               display: none;
@@ -2389,6 +2465,11 @@ footer {
     right: -10px;
     top: -10px;
     z-index: 2;
+    @include sp {
+      width: 35px;
+      height: 35px;
+      overflow: hidden;
+    }
   }
   &:after {
     content: url("../images/company/line02.png");
@@ -2396,6 +2477,12 @@ footer {
     position: absolute;
     bottom: -23px;
     left: -10px;
+    @include sp {
+      width: 35px;
+      height: 35px;
+      overflow: hidden;
+      bottom: -10px;
+    }
   }
 }
 .space_block {
@@ -2403,6 +2490,10 @@ footer {
     h4.color {
       padding-bottom: 25px;
       padding-top: 35px;
+      @include sp {
+        padding-bottom: 0;
+        line-height: 1.485;
+      }
     }
   }
   h4 {
@@ -2427,6 +2518,8 @@ footer {
   margin: 50px auto 50px;
   @include sp {
     margin: 30px auto 30px;
+    width: 5px;
+    height: 5px;
   }
 }
 .csr {
@@ -2460,8 +2553,9 @@ footer {
     letter-spacing: 0.05em;
     @include sp {
       background: none;
-      margin-top: 35px;
+      margin-top: 30px;
       padding: 0 40px;
+      line-height: 1.715;
     }
     .p_head {
       font-size: 1.1875rem;
